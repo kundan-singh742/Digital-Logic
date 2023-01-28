@@ -1,0 +1,22 @@
+module TPG
+(
+	input CLK, CLR, ONOFF,
+	output [7:0] OUT
+);
+	wire [7:0]A;
+
+	OnOffSwitch OnOffSwitch_inst
+(
+	.clock_sig(CLK) ,	// input  clock_sig_sig
+	.reset_sig(CLR) ,	// input  reset_sig_sig
+	.OnOff_sig(OnOff_sig_sig) ,	// input  OnOff_sig_sig
+	.OUT_sig(A) 	// output  OUT_sig_sig
+);
+
+
+EightBitCounter #(4'b8)EightBitCounter_inst
+(
+	.COUNT(A) ,	// input  COUNT_sig
+	.CLEAR(CLR) ,	// input  CLEAR_sig
+	.y(OUT) 	// output [N-1:0] y_sig
+);

@@ -1,0 +1,41 @@
+//One Hz clock, Input clock is 50Mhz
+module oneHzclock
+(
+		input clock, reset,
+		output OneHz,
+)
+		wire TenMHz, OneMHz, OneKHz;
+		
+		divideXn #(3'd5,3'd3) div5
+		(
+			.CLOCK(clock),  
+			.CLEAR(reset),
+			.OUT(TenMHz),
+			.COUNT(count)
+		);
+		
+		divideXn #(4'd10,4'd4) div10
+		(
+			.CLOCK(TenMHz),  
+			.CLEAR(reset),
+			.OUT(OneMHz),
+			.COUNT(count)
+		);
+		
+		divideXn #(10'd1000,4'd10) div1000L
+		(
+			.CLOCK(OneMHz),  
+			.CLEAR(reset),
+			.OUT(OneKHz),
+			.COUNT(count)
+		);
+		
+		divideXn #(10'd1000,4'd10) div1000H
+		(
+			.CLOCK(OneKHz),  
+			.CLEAR(reset),
+			.OUT(OneHz),
+			.COUNT(count)
+		);
+		
+		

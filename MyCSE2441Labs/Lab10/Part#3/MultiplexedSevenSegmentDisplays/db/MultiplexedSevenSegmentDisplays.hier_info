@@ -1,0 +1,724 @@
+|MultiplexedSevenSegmentDisplays
+CLOCK => CLOCK.IN6
+RESET => RESET.IN7
+ONOFF => ONOFF.IN1
+Controller_CAT[0] <= FSM:FSM_Controller.CAT
+Controller_CAT[1] <= FSM:FSM_Controller.CAT
+Controller_CAT[2] <= FSM:FSM_Controller.CAT
+Controller_CAT[3] <= FSM:FSM_Controller.CAT
+HEX0[0] <= OutputUnit:OutputUnit_inst.hex0
+HEX0[1] <= OutputUnit:OutputUnit_inst.hex0
+HEX0[2] <= OutputUnit:OutputUnit_inst.hex0
+HEX0[3] <= OutputUnit:OutputUnit_inst.hex0
+HEX0[4] <= OutputUnit:OutputUnit_inst.hex0
+HEX0[5] <= OutputUnit:OutputUnit_inst.hex0
+HEX0[6] <= OutputUnit:OutputUnit_inst.hex0
+HEX1[0] <= OutputUnit:OutputUnit_inst.hex1
+HEX1[1] <= OutputUnit:OutputUnit_inst.hex1
+HEX1[2] <= OutputUnit:OutputUnit_inst.hex1
+HEX1[3] <= OutputUnit:OutputUnit_inst.hex1
+HEX1[4] <= OutputUnit:OutputUnit_inst.hex1
+HEX1[5] <= OutputUnit:OutputUnit_inst.hex1
+HEX1[6] <= OutputUnit:OutputUnit_inst.hex1
+HEX2[0] <= OutputUnit:OutputUnit_inst.hex2
+HEX2[1] <= OutputUnit:OutputUnit_inst.hex2
+HEX2[2] <= OutputUnit:OutputUnit_inst.hex2
+HEX2[3] <= OutputUnit:OutputUnit_inst.hex2
+HEX2[4] <= OutputUnit:OutputUnit_inst.hex2
+HEX2[5] <= OutputUnit:OutputUnit_inst.hex2
+HEX2[6] <= OutputUnit:OutputUnit_inst.hex2
+HEX3[0] <= OutputUnit:OutputUnit_inst.hex3
+HEX3[1] <= OutputUnit:OutputUnit_inst.hex3
+HEX3[2] <= OutputUnit:OutputUnit_inst.hex3
+HEX3[3] <= OutputUnit:OutputUnit_inst.hex3
+HEX3[4] <= OutputUnit:OutputUnit_inst.hex3
+HEX3[5] <= OutputUnit:OutputUnit_inst.hex3
+HEX3[6] <= OutputUnit:OutputUnit_inst.hex3
+f_hex[0] <= SignMagnitude:SignMagnitude_inst.a
+f_hex[1] <= SignMagnitude:SignMagnitude_inst.b
+f_hex[2] <= SignMagnitude:SignMagnitude_inst.c
+f_hex[3] <= SignMagnitude:SignMagnitude_inst.d
+f_hex[4] <= SignMagnitude:SignMagnitude_inst.e
+f_hex[5] <= SignMagnitude:SignMagnitude_inst.f
+f_hex[6] <= SignMagnitude:SignMagnitude_inst.g
+Controller_SEL[0] <= Controller_SEL[0].DB_MAX_OUTPUT_PORT_TYPE
+Controller_SEL[1] <= Controller_SEL[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|TPG:TPG_inst
+CLK => CLK.IN1
+CLR => CLR.IN2
+ONOFF => ONOFF.IN1
+OUT[0] <= EightBitCounter:EightBitCounter_inst.y
+OUT[1] <= EightBitCounter:EightBitCounter_inst.y
+OUT[2] <= EightBitCounter:EightBitCounter_inst.y
+OUT[3] <= EightBitCounter:EightBitCounter_inst.y
+OUT[4] <= EightBitCounter:EightBitCounter_inst.y
+OUT[5] <= EightBitCounter:EightBitCounter_inst.y
+OUT[6] <= EightBitCounter:EightBitCounter_inst.y
+OUT[7] <= EightBitCounter:EightBitCounter_inst.y
+
+
+|MultiplexedSevenSegmentDisplays|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst
+clock_sig => clock_sig.IN1
+reset_sig => reset_sig.IN1
+OnOff_sig => OnOff_sig.IN1
+OUT_sig <= OnOffToggle:OnOffToggle_inst.OUT
+
+
+|MultiplexedSevenSegmentDisplays|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst
+clock => clock.IN1
+reset => reset.IN4
+OneHz <= divideXN:div1000H.OUT
+
+
+|MultiplexedSevenSegmentDisplays|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLK => COUNT[4]~reg0.CLK
+CLK => COUNT[5]~reg0.CLK
+CLK => COUNT[6]~reg0.CLK
+CLK => COUNT[7]~reg0.CLK
+CLK => COUNT[8]~reg0.CLK
+CLK => COUNT[9]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => COUNT[4]~reg0.ACLR
+CLEAR => COUNT[5]~reg0.ACLR
+CLEAR => COUNT[6]~reg0.ACLR
+CLEAR => COUNT[7]~reg0.ACLR
+CLEAR => COUNT[8]~reg0.ACLR
+CLEAR => COUNT[9]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[4] <= COUNT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[5] <= COUNT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[6] <= COUNT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[7] <= COUNT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[8] <= COUNT[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[9] <= COUNT[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLK => COUNT[4]~reg0.CLK
+CLK => COUNT[5]~reg0.CLK
+CLK => COUNT[6]~reg0.CLK
+CLK => COUNT[7]~reg0.CLK
+CLK => COUNT[8]~reg0.CLK
+CLK => COUNT[9]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => COUNT[4]~reg0.ACLR
+CLEAR => COUNT[5]~reg0.ACLR
+CLEAR => COUNT[6]~reg0.ACLR
+CLEAR => COUNT[7]~reg0.ACLR
+CLEAR => COUNT[8]~reg0.ACLR
+CLEAR => COUNT[9]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[4] <= COUNT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[5] <= COUNT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[6] <= COUNT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[7] <= COUNT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[8] <= COUNT[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[9] <= COUNT[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|OnOffToggle:OnOffToggle_inst
+OnOff => state.CLK
+IN => Mult0.IN0
+OUT <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|TPG:TPG_inst|EightBitCounter:EightBitCounter_inst
+CLOCK => y[0]~reg0.CLK
+CLOCK => y[1]~reg0.CLK
+CLOCK => y[2]~reg0.CLK
+CLOCK => y[3]~reg0.CLK
+CLOCK => y[4]~reg0.CLK
+CLOCK => y[5]~reg0.CLK
+CLOCK => y[6]~reg0.CLK
+CLOCK => y[7]~reg0.CLK
+CLEAR => y[0]~reg0.ACLR
+CLEAR => y[1]~reg0.ACLR
+CLEAR => y[2]~reg0.ACLR
+CLEAR => y[3]~reg0.ACLR
+CLEAR => y[4]~reg0.ACLR
+CLEAR => y[5]~reg0.ACLR
+CLEAR => y[6]~reg0.ACLR
+CLEAR => y[7]~reg0.ACLR
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN1
+in[3] => in[3].IN1
+in[4] => in[4].IN1
+in[5] => in[5].IN1
+in[6] => in[6].IN1
+in[7] => in[7].IN2
+out[0] <= <GND>
+out[1] <= <GND>
+out[2] <= <GND>
+out[3] <= <GND>
+out[4] <= <GND>
+out[5] <= <GND>
+out[6] <= <GND>
+out[7] <= <GND>
+hex0[0] <= SignMagnitude:OnesPlace.a
+hex0[1] <= SignMagnitude:OnesPlace.b
+hex0[2] <= SignMagnitude:OnesPlace.c
+hex0[3] <= SignMagnitude:OnesPlace.d
+hex0[4] <= SignMagnitude:OnesPlace.e
+hex0[5] <= SignMagnitude:OnesPlace.f
+hex0[6] <= SignMagnitude:OnesPlace.g
+hex1[0] <= SignMagnitude:TensPlace.a
+hex1[1] <= SignMagnitude:TensPlace.b
+hex1[2] <= SignMagnitude:TensPlace.c
+hex1[3] <= SignMagnitude:TensPlace.d
+hex1[4] <= SignMagnitude:TensPlace.e
+hex1[5] <= SignMagnitude:TensPlace.f
+hex1[6] <= SignMagnitude:TensPlace.g
+hex2[0] <= SignMagnitude:HundredsPlace.a
+hex2[1] <= SignMagnitude:HundredsPlace.b
+hex2[2] <= SignMagnitude:HundredsPlace.c
+hex2[3] <= SignMagnitude:HundredsPlace.d
+hex2[4] <= SignMagnitude:HundredsPlace.e
+hex2[5] <= SignMagnitude:HundredsPlace.f
+hex2[6] <= SignMagnitude:HundredsPlace.g
+hex3[0] <= SignMagnitude:SignsPlace.a
+hex3[1] <= SignMagnitude:SignsPlace.b
+hex3[2] <= SignMagnitude:SignsPlace.c
+hex3[3] <= SignMagnitude:SignsPlace.d
+hex3[4] <= SignMagnitude:SignsPlace.e
+hex3[5] <= SignMagnitude:SignsPlace.f
+hex3[6] <= SignMagnitude:SignsPlace.g
+ones_out[0] <= ones[0].DB_MAX_OUTPUT_PORT_TYPE
+ones_out[1] <= ones[1].DB_MAX_OUTPUT_PORT_TYPE
+ones_out[2] <= ones[2].DB_MAX_OUTPUT_PORT_TYPE
+ones_out[3] <= ones[3].DB_MAX_OUTPUT_PORT_TYPE
+tens_out[0] <= tens[0].DB_MAX_OUTPUT_PORT_TYPE
+tens_out[1] <= tens[1].DB_MAX_OUTPUT_PORT_TYPE
+tens_out[2] <= tens[2].DB_MAX_OUTPUT_PORT_TYPE
+tens_out[3] <= tens[3].DB_MAX_OUTPUT_PORT_TYPE
+hundred_out[0] <= <GND>
+hundred_out[1] <= <GND>
+hundred_out[2] <= <GND>
+hundred_out[3] <= <GND>
+sign_out[0] <= in[7].DB_MAX_OUTPUT_PORT_TYPE
+sign_out[1] <= <VCC>
+sign_out[2] <= <VCC>
+sign_out[3] <= <VCC>
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement
+Ai[0] => comb.IN0
+Ai[1] => comb.IN0
+Ai[2] => comb.IN0
+Ai[3] => comb.IN0
+Ai[4] => comb.IN0
+Ai[5] => comb.IN0
+Ai[6] => comb.IN0
+Ai[7] => Ai[7].IN2
+Bo[0] <= HAbehav:s0.si
+Bo[1] <= HAbehav:s1.si
+Bo[2] <= HAbehav:s2.si
+Bo[3] <= HAbehav:s3.si
+Bo[4] <= HAbehav:s4.si
+Bo[5] <= HAbehav:s5.si
+Bo[6] <= HAbehav:s6.si
+Bo[7] <= HAbehav:s7.si
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s0
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s1
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s2
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s3
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s4
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s5
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s6
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s7
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD
+A[0] => ONES[0].DATAIN
+A[1] => d5[0].IN1
+A[2] => d4[0].IN1
+A[3] => d3[0].IN1
+A[4] => d2[0].IN1
+A[5] => d1[0].IN1
+A[6] => d1[1].IN1
+A[7] => d1[2].IN1
+ONES[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+ONES[1] <= BCDConverter:m5.port1
+ONES[2] <= BCDConverter:m5.port1
+ONES[3] <= BCDConverter:m5.port1
+TENS[0] <= BCDConverter:m5.port1
+TENS[1] <= BCDConverter:m7.port1
+TENS[2] <= BCDConverter:m7.port1
+TENS[3] <= BCDConverter:m7.port1
+HUNDREDS[0] <= BCDConverter:m7.port1
+HUNDREDS[1] <= BCDConverter:m6.port1
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m1
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m2
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m3
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m4
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m5
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m6
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m7
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|OutputUnit:OutputUnit_inst|SignMagnitude:SignsPlace
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|divideXN:divideXN_5MHz
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLK => COUNT[4]~reg0.CLK
+CLK => COUNT[5]~reg0.CLK
+CLK => COUNT[6]~reg0.CLK
+CLK => COUNT[7]~reg0.CLK
+CLK => COUNT[8]~reg0.CLK
+CLK => COUNT[9]~reg0.CLK
+CLK => COUNT[10]~reg0.CLK
+CLK => COUNT[11]~reg0.CLK
+CLK => COUNT[12]~reg0.CLK
+CLK => COUNT[13]~reg0.CLK
+CLK => COUNT[14]~reg0.CLK
+CLK => COUNT[15]~reg0.CLK
+CLK => COUNT[16]~reg0.CLK
+CLK => COUNT[17]~reg0.CLK
+CLK => COUNT[18]~reg0.CLK
+CLK => COUNT[19]~reg0.CLK
+CLK => COUNT[20]~reg0.CLK
+CLK => COUNT[21]~reg0.CLK
+CLK => COUNT[22]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => COUNT[4]~reg0.ACLR
+CLEAR => COUNT[5]~reg0.ACLR
+CLEAR => COUNT[6]~reg0.ACLR
+CLEAR => COUNT[7]~reg0.ACLR
+CLEAR => COUNT[8]~reg0.ACLR
+CLEAR => COUNT[9]~reg0.ACLR
+CLEAR => COUNT[10]~reg0.ACLR
+CLEAR => COUNT[11]~reg0.ACLR
+CLEAR => COUNT[12]~reg0.ACLR
+CLEAR => COUNT[13]~reg0.ACLR
+CLEAR => COUNT[14]~reg0.ACLR
+CLEAR => COUNT[15]~reg0.ACLR
+CLEAR => COUNT[16]~reg0.ACLR
+CLEAR => COUNT[17]~reg0.ACLR
+CLEAR => COUNT[18]~reg0.ACLR
+CLEAR => COUNT[19]~reg0.ACLR
+CLEAR => COUNT[20]~reg0.ACLR
+CLEAR => COUNT[21]~reg0.ACLR
+CLEAR => COUNT[22]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[4] <= COUNT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[5] <= COUNT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[6] <= COUNT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[7] <= COUNT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[8] <= COUNT[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[9] <= COUNT[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[10] <= COUNT[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[11] <= COUNT[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[12] <= COUNT[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[13] <= COUNT[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[14] <= COUNT[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[15] <= COUNT[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[16] <= COUNT[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[17] <= COUNT[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[18] <= COUNT[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[19] <= COUNT[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[20] <= COUNT[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[21] <= COUNT[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[22] <= COUNT[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|divideXN:divideXN_tenthHz
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|FSM:FSM_Controller
+slow_clock => state[0].CLK
+slow_clock => state[1].CLK
+reset => state[0].ACLR
+reset => state[1].ACLR
+SEL[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+SEL[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+CAT[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+CAT[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+CAT[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+CAT[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|PIPO:BCDones_PIPO
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|PIPO:BCDtens_PIPO
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|PIPO:BCDhundreds_PIPO
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|PIPO:BCDsigns_PIPO
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|Four2OneMUX:Four2OneMUX_inst
+S => Decoder0.IN0
+D0[0] => Y.DATAA
+D0[1] => Y.DATAA
+D0[2] => Y.DATAA
+D0[3] => Y.DATAA
+D1[0] => Y.DATAB
+D1[1] => Y.DATAB
+D1[2] => Y.DATAB
+D1[3] => Y.DATAB
+D2[0] => ~NO_FANOUT~
+D2[1] => ~NO_FANOUT~
+D2[2] => ~NO_FANOUT~
+D2[3] => ~NO_FANOUT~
+D3[0] => ~NO_FANOUT~
+D3[1] => ~NO_FANOUT~
+D3[2] => ~NO_FANOUT~
+D3[3] => ~NO_FANOUT~
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MultiplexedSevenSegmentDisplays|SignMagnitude:SignMagnitude_inst
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

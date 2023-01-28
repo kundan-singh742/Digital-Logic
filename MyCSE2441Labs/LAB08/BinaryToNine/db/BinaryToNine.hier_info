@@ -1,0 +1,14 @@
+|BinaryToNine
+w0 => Decoder0.IN0
+w1 => Decoder0.IN1
+w2 => Decoder0.IN2
+w3 => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

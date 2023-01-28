@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/MyCSE2441Labs/LAB07/binarycounter/simulation/qsim
+vbinarycounter
+Z1 !s110 1666028114
+!i10b 1
+!s100 NlTikUPPY:EEz9WENjlMC0
+IiSlDI4g=Y8U:TAi>Yd]JT3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1666028114
+Z4 8binarycounter.vo
+Z5 Fbinarycounter.vo
+L0 32
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1666028114.000000
+Z8 !s107 binarycounter.vo|
+Z9 !s90 -work|work|binarycounter.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vbinarycounter_vlg_vec_tst
+!s110 1666028115
+!i10b 1
+!s100 7CeT_9ZHC_JX118S43l7U0
+IMC`jTeJi7A7gH2<gHPgd20
+R2
+R0
+R3
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+vhard_block
+R1
+!i10b 1
+!s100 922j_lcD`?6Mb[1F]82c;1
+If0LTeVaPa5oGeDo56zH>L2
+R2
+R0
+R3
+R4
+R5
+L0 423
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

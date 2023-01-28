@@ -1,0 +1,135 @@
+|keypad_base
+clk => clk.IN1
+row[0] => inv_row[0].IN2
+row[1] => inv_row[1].IN2
+row[2] => inv_row[2].IN2
+row[3] => inv_row[3].IN2
+col[0] << col[0].DB_MAX_OUTPUT_PORT_TYPE
+col[1] << col[1].DB_MAX_OUTPUT_PORT_TYPE
+col[2] << col[2].DB_MAX_OUTPUT_PORT_TYPE
+col[3] << col[3].DB_MAX_OUTPUT_PORT_TYPE
+value[0] << keypad_decoder:keypad_key_decoder.value
+value[1] << keypad_decoder:keypad_key_decoder.value
+value[2] << keypad_decoder:keypad_key_decoder.value
+value[3] << keypad_decoder:keypad_key_decoder.value
+valid << valid.DB_MAX_OUTPUT_PORT_TYPE
+slow_clock << slow_clock.DB_MAX_OUTPUT_PORT_TYPE
+sense << keypad_fsm:keypad_fsm.sense
+valid_digit << keypad_decoder:keypad_key_decoder.valid
+inv_row[0] << inv_row[0].DB_MAX_OUTPUT_PORT_TYPE
+inv_row[1] << inv_row[1].DB_MAX_OUTPUT_PORT_TYPE
+inv_row[2] << inv_row[2].DB_MAX_OUTPUT_PORT_TYPE
+inv_row[3] << inv_row[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|keypad_base|clock_div:keypad_clock_divider
+clk => clk_track.CLK
+clk => r_reg[0].CLK
+clk => r_reg[1].CLK
+clk => r_reg[2].CLK
+clk => r_reg[3].CLK
+clk => r_reg[4].CLK
+clk => r_reg[5].CLK
+clk => r_reg[6].CLK
+clk => r_reg[7].CLK
+clk => r_reg[8].CLK
+clk => r_reg[9].CLK
+clk => r_reg[10].CLK
+clk => r_reg[11].CLK
+clk => r_reg[12].CLK
+clk => r_reg[13].CLK
+clk => r_reg[14].CLK
+clk => r_reg[15].CLK
+clk => r_reg[16].CLK
+clk => r_reg[17].CLK
+clk => r_reg[18].CLK
+clk => r_reg[19].CLK
+clk => r_reg[20].CLK
+clk => r_reg[21].CLK
+clk => r_reg[22].CLK
+clk => r_reg[23].CLK
+clk => r_reg[24].CLK
+clk => r_reg[25].CLK
+clk => r_reg[26].CLK
+clk => r_reg[27].CLK
+clk => r_reg[28].CLK
+clk => r_reg[29].CLK
+clk => r_reg[30].CLK
+clk => r_reg[31].CLK
+reset => clk_track.ACLR
+reset => r_reg[0].ACLR
+reset => r_reg[1].ACLR
+reset => r_reg[2].ACLR
+reset => r_reg[3].ACLR
+reset => r_reg[4].ACLR
+reset => r_reg[5].ACLR
+reset => r_reg[6].ACLR
+reset => r_reg[7].ACLR
+reset => r_reg[8].ACLR
+reset => r_reg[9].ACLR
+reset => r_reg[10].ACLR
+reset => r_reg[11].ACLR
+reset => r_reg[12].ACLR
+reset => r_reg[13].ACLR
+reset => r_reg[14].ACLR
+reset => r_reg[15].ACLR
+reset => r_reg[16].ACLR
+reset => r_reg[17].ACLR
+reset => r_reg[18].ACLR
+reset => r_reg[19].ACLR
+reset => r_reg[20].ACLR
+reset => r_reg[21].ACLR
+reset => r_reg[22].ACLR
+reset => r_reg[23].ACLR
+reset => r_reg[24].ACLR
+reset => r_reg[25].ACLR
+reset => r_reg[26].ACLR
+reset => r_reg[27].ACLR
+reset => r_reg[28].ACLR
+reset => r_reg[29].ACLR
+reset => r_reg[30].ACLR
+reset => r_reg[31].ACLR
+clk_out <= clk_track.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|keypad_base|keypad_fsm:keypad_fsm
+clk => col[0]~reg0.CLK
+clk => col[1]~reg0.CLK
+clk => col[2]~reg0.CLK
+clk => col[3]~reg0.CLK
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+clk => state[2]~reg0.CLK
+clk => state[3]~reg0.CLK
+row[0] => trig.IN0
+row[1] => trig.IN1
+row[2] => trig.IN1
+row[3] => trig.IN1
+col[0] <= col[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[1] <= col[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[2] <= col[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[3] <= col[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sense <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[3] <= state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+trig <= trig.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|keypad_base|keypad_decoder:keypad_key_decoder
+row[0] => Decoder0.IN3
+row[1] => Decoder0.IN2
+row[2] => Decoder0.IN1
+row[3] => Decoder0.IN0
+col[0] => Decoder0.IN7
+col[1] => Decoder0.IN6
+col[2] => Decoder0.IN5
+col[3] => Decoder0.IN4
+value[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+valid <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+
+

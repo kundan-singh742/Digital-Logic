@@ -1,0 +1,7 @@
+module ControlUnit
+(
+	input x, CLK, CLR,
+	
+);
+
+always @(posedge CLK, negedge CLR)

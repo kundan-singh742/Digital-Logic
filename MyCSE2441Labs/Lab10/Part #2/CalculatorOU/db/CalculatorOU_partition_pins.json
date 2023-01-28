@@ -1,0 +1,129 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clear",
+					"strict" : false
+				},
+				{
+					"name" : "onoff",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

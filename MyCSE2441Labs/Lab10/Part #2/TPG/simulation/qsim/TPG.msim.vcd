@@ -1,0 +1,990 @@
+$comment
+	File created using the following command:
+		vcd file TPG.msim.vcd -direction
+$end
+$date
+	Tue Nov 15 16:18:17 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module TPG_vlg_vec_tst $end
+$var reg 1 ! CLK $end
+$var reg 1 " CLR $end
+$var reg 1 # ONOFF $end
+$var wire 1 $ OUT [7] $end
+$var wire 1 % OUT [6] $end
+$var wire 1 & OUT [5] $end
+$var wire 1 ' OUT [4] $end
+$var wire 1 ( OUT [3] $end
+$var wire 1 ) OUT [2] $end
+$var wire 1 * OUT [1] $end
+$var wire 1 + OUT [0] $end
+
+$scope module i1 $end
+$var wire 1 , gnd $end
+$var wire 1 - vcc $end
+$var wire 1 . unknown $end
+$var tri1 1 / devclrn $end
+$var tri1 1 0 devpor $end
+$var tri1 1 1 devoe $end
+$var wire 1 2 ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 3 ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 4 ~QUARTUS_CREATED_ADC2~~eoc $end
+$var wire 1 5 OUT[0]~output_o $end
+$var wire 1 6 OUT[1]~output_o $end
+$var wire 1 7 OUT[2]~output_o $end
+$var wire 1 8 OUT[3]~output_o $end
+$var wire 1 9 OUT[4]~output_o $end
+$var wire 1 : OUT[5]~output_o $end
+$var wire 1 ; OUT[6]~output_o $end
+$var wire 1 < OUT[7]~output_o $end
+$var wire 1 = CLK~input_o $end
+$var wire 1 > CLK~inputclkctrl_outclk $end
+$var wire 1 ? OnOffSwitch_inst|oneHzclock_inst|div5|COUNT~2_combout $end
+$var wire 1 @ CLR~input_o $end
+$var wire 1 A CLR~inputclkctrl_outclk $end
+$var wire 1 B OnOffSwitch_inst|oneHzclock_inst|div5|COUNT~1_combout $end
+$var wire 1 C OnOffSwitch_inst|oneHzclock_inst|div5|COUNT[1]~0_combout $end
+$var wire 1 D OnOffSwitch_inst|oneHzclock_inst|div5|Equal0~0_combout $end
+$var wire 1 E OnOffSwitch_inst|oneHzclock_inst|div5|OUT~q $end
+$var wire 1 F OnOffSwitch_inst|oneHzclock_inst|div5|OUT~clkctrl_outclk $end
+$var wire 1 G OnOffSwitch_inst|oneHzclock_inst|div10|COUNT[0]~3_combout $end
+$var wire 1 H OnOffSwitch_inst|oneHzclock_inst|div10|COUNT~1_combout $end
+$var wire 1 I OnOffSwitch_inst|oneHzclock_inst|div10|COUNT~2_combout $end
+$var wire 1 J OnOffSwitch_inst|oneHzclock_inst|div10|COUNT~0_combout $end
+$var wire 1 K OnOffSwitch_inst|oneHzclock_inst|div10|Equal0~0_combout $end
+$var wire 1 L OnOffSwitch_inst|oneHzclock_inst|div10|OUT~q $end
+$var wire 1 M OnOffSwitch_inst|oneHzclock_inst|div10|OUT~clkctrl_outclk $end
+$var wire 1 N OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[0]~10_combout $end
+$var wire 1 O OnOffSwitch_inst|oneHzclock_inst|div1000L|Equal0~0_combout $end
+$var wire 1 P OnOffSwitch_inst|oneHzclock_inst|div1000L|Equal0~1_combout $end
+$var wire 1 Q OnOffSwitch_inst|oneHzclock_inst|div1000L|Equal0~3_combout $end
+$var wire 1 R OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[0]~11 $end
+$var wire 1 S OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[1]~12_combout $end
+$var wire 1 T OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[1]~13 $end
+$var wire 1 U OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[2]~14_combout $end
+$var wire 1 V OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[2]~15 $end
+$var wire 1 W OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[3]~16_combout $end
+$var wire 1 X ~GND~combout $end
+$var wire 1 Y OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[3]~17 $end
+$var wire 1 Z OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[4]~18_combout $end
+$var wire 1 [ OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[4]~19 $end
+$var wire 1 \ OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[5]~20_combout $end
+$var wire 1 ] OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[5]~21 $end
+$var wire 1 ^ OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[6]~22_combout $end
+$var wire 1 _ OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[6]~23 $end
+$var wire 1 ` OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[7]~24_combout $end
+$var wire 1 a OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[7]~25 $end
+$var wire 1 b OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[8]~26_combout $end
+$var wire 1 c OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[8]~27 $end
+$var wire 1 d OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT[9]~28_combout $end
+$var wire 1 e OnOffSwitch_inst|oneHzclock_inst|div1000L|Equal0~2_combout $end
+$var wire 1 f OnOffSwitch_inst|oneHzclock_inst|div1000L|OUT~feeder_combout $end
+$var wire 1 g OnOffSwitch_inst|oneHzclock_inst|div1000L|OUT~q $end
+$var wire 1 h OnOffSwitch_inst|oneHzclock_inst|div1000L|OUT~clkctrl_outclk $end
+$var wire 1 i OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[0]~10_combout $end
+$var wire 1 j OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[0]~11 $end
+$var wire 1 k OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[1]~12_combout $end
+$var wire 1 l OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[1]~13 $end
+$var wire 1 m OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[2]~14_combout $end
+$var wire 1 n OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[2]~15 $end
+$var wire 1 o OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[3]~16_combout $end
+$var wire 1 p OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[3]~17 $end
+$var wire 1 q OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[4]~18_combout $end
+$var wire 1 r OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[4]~19 $end
+$var wire 1 s OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[5]~20_combout $end
+$var wire 1 t OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[5]~21 $end
+$var wire 1 u OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[6]~22_combout $end
+$var wire 1 v OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[6]~23 $end
+$var wire 1 w OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[7]~24_combout $end
+$var wire 1 x OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[7]~25 $end
+$var wire 1 y OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[8]~26_combout $end
+$var wire 1 z OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[8]~27 $end
+$var wire 1 { OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT[9]~28_combout $end
+$var wire 1 | OnOffSwitch_inst|oneHzclock_inst|div1000H|Equal0~0_combout $end
+$var wire 1 } OnOffSwitch_inst|oneHzclock_inst|div1000H|Equal0~1_combout $end
+$var wire 1 ~ OnOffSwitch_inst|oneHzclock_inst|div1000H|Equal0~3_combout $end
+$var wire 1 !! OnOffSwitch_inst|oneHzclock_inst|div1000H|Equal0~2_combout $end
+$var wire 1 "! OnOffSwitch_inst|oneHzclock_inst|div1000H|OUT~q $end
+$var wire 1 #! ONOFF~input_o $end
+$var wire 1 $! OnOffSwitch_inst|OnOffToggle_inst|state~0_combout $end
+$var wire 1 %! OnOffSwitch_inst|OnOffToggle_inst|state~q $end
+$var wire 1 &! OnOffSwitch_inst|OnOffToggle_inst|Mult0~combout $end
+$var wire 1 '! OnOffSwitch_inst|OnOffToggle_inst|Mult0~clkctrl_outclk $end
+$var wire 1 (! EightBitCounter_inst|y[0]~21_combout $end
+$var wire 1 )! EightBitCounter_inst|y[1]~7_combout $end
+$var wire 1 *! EightBitCounter_inst|y[1]~8 $end
+$var wire 1 +! EightBitCounter_inst|y[2]~9_combout $end
+$var wire 1 ,! EightBitCounter_inst|y[2]~10 $end
+$var wire 1 -! EightBitCounter_inst|y[3]~11_combout $end
+$var wire 1 .! EightBitCounter_inst|y[3]~12 $end
+$var wire 1 /! EightBitCounter_inst|y[4]~13_combout $end
+$var wire 1 0! EightBitCounter_inst|y[4]~14 $end
+$var wire 1 1! EightBitCounter_inst|y[5]~15_combout $end
+$var wire 1 2! EightBitCounter_inst|y[5]~16 $end
+$var wire 1 3! EightBitCounter_inst|y[6]~17_combout $end
+$var wire 1 4! EightBitCounter_inst|y[6]~18 $end
+$var wire 1 5! EightBitCounter_inst|y[7]~19_combout $end
+$var wire 1 6! OnOffSwitch_inst|oneHzclock_inst|div10|COUNT [3] $end
+$var wire 1 7! OnOffSwitch_inst|oneHzclock_inst|div10|COUNT [2] $end
+$var wire 1 8! OnOffSwitch_inst|oneHzclock_inst|div10|COUNT [1] $end
+$var wire 1 9! OnOffSwitch_inst|oneHzclock_inst|div10|COUNT [0] $end
+$var wire 1 :! EightBitCounter_inst|y [7] $end
+$var wire 1 ;! EightBitCounter_inst|y [6] $end
+$var wire 1 <! EightBitCounter_inst|y [5] $end
+$var wire 1 =! EightBitCounter_inst|y [4] $end
+$var wire 1 >! EightBitCounter_inst|y [3] $end
+$var wire 1 ?! EightBitCounter_inst|y [2] $end
+$var wire 1 @! EightBitCounter_inst|y [1] $end
+$var wire 1 A! EightBitCounter_inst|y [0] $end
+$var wire 1 B! OnOffSwitch_inst|oneHzclock_inst|div5|COUNT [2] $end
+$var wire 1 C! OnOffSwitch_inst|oneHzclock_inst|div5|COUNT [1] $end
+$var wire 1 D! OnOffSwitch_inst|oneHzclock_inst|div5|COUNT [0] $end
+$var wire 1 E! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [9] $end
+$var wire 1 F! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [8] $end
+$var wire 1 G! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [7] $end
+$var wire 1 H! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [6] $end
+$var wire 1 I! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [5] $end
+$var wire 1 J! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [4] $end
+$var wire 1 K! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [3] $end
+$var wire 1 L! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [2] $end
+$var wire 1 M! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [1] $end
+$var wire 1 N! OnOffSwitch_inst|oneHzclock_inst|div1000H|COUNT [0] $end
+$var wire 1 O! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [9] $end
+$var wire 1 P! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [8] $end
+$var wire 1 Q! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [7] $end
+$var wire 1 R! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [6] $end
+$var wire 1 S! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [5] $end
+$var wire 1 T! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [4] $end
+$var wire 1 U! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [3] $end
+$var wire 1 V! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [2] $end
+$var wire 1 W! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [1] $end
+$var wire 1 X! OnOffSwitch_inst|oneHzclock_inst|div1000L|COUNT [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+1#
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0,
+1-
+x.
+1/
+10
+11
+z2
+z3
+z4
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+1@
+1A
+1B
+0C
+0D
+0E
+0F
+1G
+0H
+0I
+0J
+0K
+0L
+0M
+1N
+0O
+0P
+0Q
+0R
+0S
+1T
+0U
+0V
+0W
+0X
+1Y
+0Z
+0[
+0\
+1]
+0^
+0_
+0`
+1a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+1i
+0j
+0k
+1l
+0m
+0n
+0o
+1p
+0q
+0r
+0s
+1t
+0u
+0v
+0w
+1x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+1#!
+1$!
+0%!
+0&!
+0'!
+1(!
+0)!
+0*!
+0+!
+1,!
+0-!
+0.!
+0/!
+10!
+01!
+02!
+03!
+14!
+05!
+09!
+08!
+07!
+06!
+0A!
+0@!
+0?!
+0>!
+0=!
+0<!
+0;!
+0:!
+0D!
+0C!
+0B!
+0N!
+0M!
+0L!
+0K!
+0J!
+0I!
+0H!
+0G!
+0F!
+0E!
+0X!
+0W!
+0V!
+0U!
+0T!
+0S!
+0R!
+0Q!
+0P!
+0O!
+$end
+#10000
+1!
+0"
+0@
+1=
+1>
+0A
+#20000
+0!
+1"
+1@
+0=
+0>
+1A
+#30000
+1!
+1=
+1>
+#40000
+0#
+0!
+0=
+0#!
+0>
+1%!
+1D!
+0$!
+1C
+0B
+#50000
+1!
+1=
+1>
+#60000
+1#
+0!
+0=
+1#!
+0>
+0D!
+1C!
+1B
+#70000
+1!
+1=
+1>
+#80000
+0!
+0=
+0>
+1D!
+1D
+0C
+0B
+1?
+#90000
+1!
+1=
+1>
+#100000
+0!
+0=
+0>
+1B!
+0D!
+0C!
+1E
+1F
+0D
+0?
+#110000
+1!
+1=
+1>
+#120000
+0!
+0=
+0>
+0B!
+0E
+0F
+1B
+19!
+1I
+0G
+#130000
+1!
+1=
+1>
+#140000
+0#
+0!
+0=
+0#!
+0>
+0%!
+1D!
+1$!
+1C
+0B
+#150000
+1!
+1=
+1>
+#160000
+0!
+0=
+0>
+0D!
+1C!
+1B
+#170000
+1!
+1=
+1>
+#180000
+1#
+0!
+0=
+1#!
+0>
+1D!
+1D
+0C
+0B
+1?
+#190000
+1!
+1=
+1>
+#200000
+0!
+0=
+0>
+1B!
+0D!
+0C!
+1E
+1F
+0D
+0?
+#210000
+1!
+1=
+1>
+#220000
+0!
+0=
+0>
+0B!
+0E
+0F
+1B
+09!
+18!
+1G
+#230000
+1!
+1=
+1>
+#240000
+0!
+0=
+0>
+1D!
+1C
+0B
+#250000
+1!
+1=
+1>
+#260000
+0!
+0=
+0>
+0D!
+1C!
+1B
+#270000
+1!
+1=
+1>
+#280000
+0!
+0=
+0>
+1D!
+1D
+0C
+0B
+1?
+#290000
+1!
+1=
+1>
+#300000
+0!
+0=
+0>
+1B!
+0D!
+0C!
+1E
+1F
+0D
+0?
+#310000
+1!
+1=
+1>
+#320000
+0!
+0=
+0>
+0B!
+0E
+0F
+1B
+19!
+0I
+1H
+0G
+#330000
+0#
+1!
+1=
+0#!
+1>
+1%!
+0$!
+#340000
+0!
+0=
+0>
+1D!
+1C
+0B
+#350000
+1!
+1=
+1>
+#360000
+1#
+0!
+0=
+1#!
+0>
+0D!
+1C!
+1B
+#370000
+1!
+1=
+1>
+#380000
+0!
+0=
+0>
+1D!
+1D
+0C
+0B
+1?
+#390000
+1!
+1=
+1>
+#400000
+0!
+0=
+0>
+1B!
+0D!
+0C!
+1E
+1F
+0D
+0?
+#410000
+1!
+1=
+1>
+#420000
+0!
+0=
+0>
+0B!
+0E
+0F
+1B
+09!
+17!
+08!
+1G
+#430000
+1!
+1=
+1>
+#440000
+0!
+0=
+0>
+1D!
+1C
+0B
+#450000
+1!
+1=
+1>
+#460000
+0!
+0=
+0>
+0D!
+1C!
+1B
+#470000
+1!
+1=
+1>
+#480000
+0!
+0=
+0>
+1D!
+1D
+0C
+0B
+1?
+#490000
+1!
+1=
+1>
+#500000
+0!
+0=
+0>
+1B!
+0D!
+0C!
+1E
+1F
+0D
+0?
+#510000
+1!
+1=
+1>
+#520000
+0!
+0=
+0>
+0B!
+0E
+0F
+1B
+19!
+1I
+0G
+#530000
+1!
+1=
+1>
+#540000
+0!
+0=
+0>
+1D!
+1C
+0B
+#550000
+1!
+1=
+1>
+#560000
+0!
+0=
+0>
+0D!
+1C!
+1B
+#570000
+1!
+1=
+1>
+#580000
+0!
+0=
+0>
+1D!
+1D
+0C
+0B
+1?
+#590000
+1!
+1=
+1>
+#600000
+0!
+0=
+0>
+1B!
+0D!
+0C!
+1E
+1F
+0D
+0?
+#610000
+1!
+1=
+1>
+#620000
+0!
+0=
+0>
+0B!
+0E
+0F
+1B
+09!
+18!
+1G
+#630000
+1!
+1=
+1>
+#640000
+0!
+0=
+0>
+1D!
+1C
+0B
+#650000
+1!
+1=
+1>
+#660000
+0!
+0=
+0>
+0D!
+1C!
+1B
+#670000
+1!
+1=
+1>
+#680000
+0!
+0=
+0>
+1D!
+1D
+0C
+0B
+1?
+#690000
+1!
+1=
+1>
+#700000
+0!
+0=
+0>
+1B!
+0D!
+0C!
+1E
+1F
+0D
+0?
+#710000
+1!
+1=
+1>
+#720000
+0!
+0=
+0>
+0B!
+0E
+0F
+1B
+19!
+1J
+0I
+0H
+0G
+#730000
+1!
+1=
+1>
+#740000
+0!
+0=
+0>
+1D!
+1C
+0B
+#750000
+1!
+1=
+1>
+#760000
+0!
+0=
+0>
+0D!
+1C!
+1B
+#770000
+1!
+1=
+1>
+#780000
+0!
+0=
+0>
+1D!
+1D
+0C
+0B
+1?
+#790000
+1!
+1=
+1>
+#800000
+0!
+0=
+0>
+1B!
+0D!
+0C!
+1E
+1F
+0D
+0?
+#810000
+1!
+1=
+1>
+#820000
+0!
+0=
+0>
+0B!
+0E
+0F
+1B
+09!
+07!
+08!
+16!
+1K
+1G
+#830000
+1!
+1=
+1>
+#840000
+0!
+0=
+0>
+1D!
+1C
+0B
+#850000
+1!
+1=
+1>
+#860000
+0!
+0=
+0>
+0D!
+1C!
+1B
+#870000
+1!
+1=
+1>
+#880000
+0!
+0=
+0>
+1D!
+1D
+0C
+0B
+1?
+#890000
+1!
+1=
+1>
+#900000
+0!
+0=
+0>
+1B!
+0D!
+0C!
+1E
+1F
+0D
+0?
+#910000
+1!
+1=
+1>
+#920000
+0!
+0=
+0>
+0B!
+0E
+0F
+1B
+19!
+1L
+1M
+0K
+0J
+0G
+#930000
+1!
+1=
+1>
+#940000
+0!
+0=
+0>
+1D!
+1C
+0B
+#950000
+1!
+1=
+1>
+#960000
+0!
+0=
+0>
+0D!
+1C!
+1B
+#970000
+1!
+1=
+1>
+#980000
+0!
+0=
+0>
+1D!
+1D
+0C
+0B
+1?
+#990000
+1!
+1=
+1>
+#1000000

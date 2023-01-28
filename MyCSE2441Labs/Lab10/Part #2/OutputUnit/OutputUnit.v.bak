@@ -1,0 +1,23 @@
+module OutputUnit
+(
+	input[7:0]in,
+	output[7:0]out
+);
+	wire[7:0] wireO;
+	wire[3:0] ones;
+	wire[3:0] tens;
+	wire[1:0] hundred;
+	
+TwosComplement TwosComplement_inst
+(
+	.Ai(in) ,						// input 
+	.Bo(wireO) 						// output
+);
+
+Binary2BCD Binary2BCD_inst
+(
+	.A(A_sig) ,						// input [7:0] A_sig
+	.ONES(ONES_sig) ,				// output [3:0] ONES_sig
+	.TENS(TENS_sig) ,				// output [3:0] TENS_sig
+	.HUNDREDS(HUNDREDS_sig) 	// output [1:0] HUNDREDS_sig
+);

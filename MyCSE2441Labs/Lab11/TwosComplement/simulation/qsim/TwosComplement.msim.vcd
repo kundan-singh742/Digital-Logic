@@ -1,0 +1,304 @@
+$comment
+	File created using the following command:
+		vcd file TwosComplement.msim.vcd -direction
+$end
+$date
+	Tue Nov 15 13:09:53 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module TwosComplement_vlg_vec_tst $end
+$var reg 8 ! Ai [7:0] $end
+$var wire 1 " Bo [7] $end
+$var wire 1 # Bo [6] $end
+$var wire 1 $ Bo [5] $end
+$var wire 1 % Bo [4] $end
+$var wire 1 & Bo [3] $end
+$var wire 1 ' Bo [2] $end
+$var wire 1 ( Bo [1] $end
+$var wire 1 ) Bo [0] $end
+
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var tri1 1 - devclrn $end
+$var tri1 1 . devpor $end
+$var tri1 1 / devoe $end
+$var wire 1 0 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 1 ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 2 ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 3 ~QUARTUS_CREATED_ADC2~~eoc $end
+$var wire 1 4 Bo[0]~output_o $end
+$var wire 1 5 Bo[1]~output_o $end
+$var wire 1 6 Bo[2]~output_o $end
+$var wire 1 7 Bo[3]~output_o $end
+$var wire 1 8 Bo[4]~output_o $end
+$var wire 1 9 Bo[5]~output_o $end
+$var wire 1 : Bo[6]~output_o $end
+$var wire 1 ; Bo[7]~output_o $end
+$var wire 1 < Ai[0]~input_o $end
+$var wire 1 = Ai[7]~input_o $end
+$var wire 1 > Ai[1]~input_o $end
+$var wire 1 ? s1|si~0_combout $end
+$var wire 1 @ Ai[2]~input_o $end
+$var wire 1 A s2|si~0_combout $end
+$var wire 1 B s2|Decoder0~0_combout $end
+$var wire 1 C Ai[3]~input_o $end
+$var wire 1 D s3|si~0_combout $end
+$var wire 1 E Ai[4]~input_o $end
+$var wire 1 F s4|si~0_combout $end
+$var wire 1 G s4|Decoder0~0_combout $end
+$var wire 1 H Ai[5]~input_o $end
+$var wire 1 I s5|si~0_combout $end
+$var wire 1 J Ai[6]~input_o $end
+$var wire 1 K s6|si~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0*
+1+
+x,
+1-
+1.
+1/
+00
+z1
+z2
+z3
+04
+05
+06
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+1A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+$end
+#10000
+b10 !
+b11 !
+1>
+1<
+14
+1)
+1?
+15
+1(
+#60000
+b1 !
+b0 !
+0>
+0<
+04
+0)
+0?
+05
+0(
+#100000
+b1000 !
+b1100 !
+1C
+1@
+0A
+1D
+17
+16
+1'
+1&
+#140000
+b1001100 !
+b1101100 !
+b1111100 !
+b1111110 !
+b1111111 !
+1J
+1H
+1E
+1>
+1<
+14
+1)
+1K
+1I
+1F
+1?
+15
+18
+19
+1:
+1#
+1$
+1%
+1(
+#190000
+b1110111 !
+b1110011 !
+b110011 !
+b10011 !
+b11 !
+b1 !
+0J
+0H
+0E
+0C
+0@
+0>
+1A
+0K
+0I
+0F
+0D
+0?
+05
+07
+08
+09
+0:
+06
+0'
+0#
+0$
+0%
+0&
+0(
+#240000
+b10000001 !
+b10001001 !
+b10001101 !
+b11001101 !
+b11101101 !
+b11111101 !
+b11111111 !
+1J
+1H
+1E
+1C
+1@
+1>
+1=
+1;
+1"
+#280000
+b11110111 !
+b11110011 !
+b10110011 !
+b10010011 !
+b10000011 !
+b10000001 !
+0J
+0H
+0E
+0C
+0@
+0>
+0A
+1K
+1I
+1F
+1D
+1?
+15
+17
+18
+19
+1:
+16
+1'
+1#
+1$
+1%
+1&
+1(
+#320000
+b10001001 !
+b10101001 !
+b10101011 !
+1H
+1C
+1>
+0I
+0D
+0?
+05
+07
+09
+0$
+0&
+0(
+#370000
+b10101010 !
+b10101110 !
+b11101110 !
+b11111110 !
+b11110110 !
+b11110100 !
+1J
+1E
+0C
+1@
+0>
+0<
+04
+0)
+0K
+0F
+1D
+17
+08
+0:
+0#
+0%
+1&
+#410000
+b1110100 !
+b1010100 !
+b1010000 !
+b10000 !
+b0 !
+0J
+0H
+0E
+0@
+0=
+0;
+1A
+0"
+0D
+07
+06
+0'
+0&
+#1000000

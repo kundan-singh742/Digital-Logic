@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/MyCSE2441Labs/EightBitAU/simulation/qsim
+vEightBitAU
+!s110 1668177738
+!i10b 1
+!s100 =L^`HUXB;dOMm1Gj1ZVHS2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6SWe7m6E[hRD^J3f8=08^3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1668177736
+Z4 8EightBitAU.vo
+Z5 FEightBitAU.vo
+!i122 98
+L0 32 3337
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1668177736.000000
+Z8 !s107 EightBitAU.vo|
+Z9 !s90 -work|work|EightBitAU.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@eight@bit@a@u
+vEightBitAU_vlg_vec_tst
+!s110 1668177741
+!i10b 1
+!s100 cTLDfJh`f0:KT9iMbY8072
+R1
+I5b3_ojgF=W@z5:DSTh[0I3
+R2
+R0
+w1668177734
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 99
+L0 30 351
+R6
+r1
+!s85 0
+31
+!s108 1668177740.000000
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+n@eight@bit@a@u_vlg_vec_tst
+vhard_block
+!s110 1668177740
+!i10b 1
+!s100 5HLYg@aJl9IiM_S6_3TAM2
+R1
+IGXL12n8SaXIZ]hbFeIQeB0
+R2
+R0
+R3
+R4
+R5
+!i122 98
+L0 3370 45
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

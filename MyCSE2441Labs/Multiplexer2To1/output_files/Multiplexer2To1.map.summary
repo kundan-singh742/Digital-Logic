@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Dec 01 01:53:13 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Multiplexer2To1
+Top-level Entity Name : Multiplexer2To1
+Family : MAX 10
+Total logic elements : 8
+    Total combinational functions : 8
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 25
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

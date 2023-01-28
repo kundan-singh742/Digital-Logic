@@ -1,0 +1,353 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : -22.429
+TNS   : -187.620
+
+Type  : Slow 1200mV 85C Model Setup 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : -10.877
+TNS   : -78.558
+
+Type  : Slow 1200mV 85C Model Setup 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : -10.452
+TNS   : -74.740
+
+Type  : Slow 1200mV 85C Model Setup 'Clock'
+Slack : -6.985
+TNS   : -95.744
+
+Type  : Slow 1200mV 85C Model Setup 'Row[0]'
+Slack : -3.005
+TNS   : -34.680
+
+Type  : Slow 1200mV 85C Model Setup 'Enter'
+Slack : -2.510
+TNS   : -11.932
+
+Type  : Slow 1200mV 85C Model Setup 'InputUnit:IU|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -2.358
+TNS   : -12.366
+
+Type  : Slow 1200mV 85C Model Hold 'Row[0]'
+Slack : -0.896
+TNS   : -2.696
+
+Type  : Slow 1200mV 85C Model Hold 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : 0.324
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'InputUnit:IU|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Enter'
+Slack : 1.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : 4.011
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : 4.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : -6.165
+TNS   : -48.035
+
+Type  : Slow 1200mV 85C Model Recovery 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : -4.091
+TNS   : -32.652
+
+Type  : Slow 1200mV 85C Model Recovery 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : -3.866
+TNS   : -30.273
+
+Type  : Slow 1200mV 85C Model Recovery 'Row[0]'
+Slack : -1.651
+TNS   : -17.117
+
+Type  : Slow 1200mV 85C Model Removal 'Row[0]'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : 4.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : 4.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : 6.205
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : -3.310
+TNS   : -509.657
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Row[0]'
+Slack : -3.000
+TNS   : -84.166
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -56.314
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Enter'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'InputUnit:IU|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Setup 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : -20.794
+TNS   : -172.799
+
+Type  : Slow 1200mV 0C Model Setup 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : -10.034
+TNS   : -72.523
+
+Type  : Slow 1200mV 0C Model Setup 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : -9.634
+TNS   : -68.905
+
+Type  : Slow 1200mV 0C Model Setup 'Clock'
+Slack : -6.348
+TNS   : -84.038
+
+Type  : Slow 1200mV 0C Model Setup 'Row[0]'
+Slack : -2.647
+TNS   : -30.422
+
+Type  : Slow 1200mV 0C Model Setup 'Enter'
+Slack : -2.278
+TNS   : -10.836
+
+Type  : Slow 1200mV 0C Model Setup 'InputUnit:IU|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -2.128
+TNS   : -10.835
+
+Type  : Slow 1200mV 0C Model Hold 'Row[0]'
+Slack : -0.982
+TNS   : -3.030
+
+Type  : Slow 1200mV 0C Model Hold 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : 0.090
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'InputUnit:IU|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Enter'
+Slack : 1.156
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : 3.811
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : 4.085
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : -5.606
+TNS   : -43.575
+
+Type  : Slow 1200mV 0C Model Recovery 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : -3.720
+TNS   : -29.720
+
+Type  : Slow 1200mV 0C Model Recovery 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : -3.499
+TNS   : -27.422
+
+Type  : Slow 1200mV 0C Model Recovery 'Row[0]'
+Slack : -1.346
+TNS   : -13.416
+
+Type  : Slow 1200mV 0C Model Removal 'Row[0]'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : 3.716
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : 4.044
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : 5.715
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : -3.001
+TNS   : -452.232
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Row[0]'
+Slack : -3.000
+TNS   : -78.349
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -56.314
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Enter'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'InputUnit:IU|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Fast 1200mV 0C Model Setup 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : -10.232
+TNS   : -82.056
+
+Type  : Fast 1200mV 0C Model Setup 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : -4.398
+TNS   : -31.588
+
+Type  : Fast 1200mV 0C Model Setup 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : -4.150
+TNS   : -29.762
+
+Type  : Fast 1200mV 0C Model Setup 'Clock'
+Slack : -2.292
+TNS   : -18.768
+
+Type  : Fast 1200mV 0C Model Setup 'Row[0]'
+Slack : -1.478
+TNS   : -15.856
+
+Type  : Fast 1200mV 0C Model Setup 'InputUnit:IU|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -1.045
+TNS   : -3.839
+
+Type  : Fast 1200mV 0C Model Setup 'Enter'
+Slack : -0.890
+TNS   : -4.089
+
+Type  : Fast 1200mV 0C Model Hold 'Row[0]'
+Slack : -0.270
+TNS   : -0.566
+
+Type  : Fast 1200mV 0C Model Hold 'InputUnit:IU|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Enter'
+Slack : 0.631
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : 1.364
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : 1.520
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : -2.343
+TNS   : -18.094
+
+Type  : Fast 1200mV 0C Model Recovery 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : -1.260
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : -1.143
+TNS   : -8.829
+
+Type  : Fast 1200mV 0C Model Recovery 'Row[0]'
+Slack : -0.518
+TNS   : -4.890
+
+Type  : Fast 1200mV 0C Model Removal 'Row[0]'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : 1.708
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : 1.848
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : 2.860
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Row[0]'
+Slack : -3.000
+TNS   : -48.588
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -42.116
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Enter'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ControlUnit:ControlUnit_inst|IUAU'
+Slack : -1.418
+TNS   : -128.532
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ControlUnit:ControlUnit_inst|LoadA'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ControlUnit:ControlUnit_inst|LoadB'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'InputUnit:IU|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider|clk_track'
+Slack : -1.000
+TNS   : -8.000
+
+------------------------------------------------------------

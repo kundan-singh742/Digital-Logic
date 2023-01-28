@@ -1,0 +1,10 @@
+//2 to 1 Multiplexer
+module Multiplexer2To1 #(parameter N = 4)
+(
+	input [N-1:0]A,B,
+	input P,
+	output [N-1:0]Y
+);
+
+	assign Y = S==0? A : B;
+endmodule

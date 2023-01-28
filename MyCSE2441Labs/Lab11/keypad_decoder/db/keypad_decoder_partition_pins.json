@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "value[0]",
+					"strict" : false
+				},
+				{
+					"name" : "value[1]",
+					"strict" : false
+				},
+				{
+					"name" : "value[2]",
+					"strict" : false
+				},
+				{
+					"name" : "value[3]",
+					"strict" : false
+				},
+				{
+					"name" : "valid",
+					"strict" : false
+				},
+				{
+					"name" : "row[0]",
+					"strict" : false
+				},
+				{
+					"name" : "row[2]",
+					"strict" : false
+				},
+				{
+					"name" : "row[3]",
+					"strict" : false
+				},
+				{
+					"name" : "col[3]",
+					"strict" : false
+				},
+				{
+					"name" : "col[1]",
+					"strict" : false
+				},
+				{
+					"name" : "row[1]",
+					"strict" : false
+				},
+				{
+					"name" : "col[0]",
+					"strict" : false
+				},
+				{
+					"name" : "col[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

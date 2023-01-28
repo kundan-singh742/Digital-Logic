@@ -1,0 +1,56 @@
+module MultiplexedSevenSegmentDisplays
+(
+	input CLK, CLR, LOAD,
+	input [7:0]in,
+);
+	wire Controller_LOAD, Controller_SEL;
+	wire[7:0] wireO;
+	wire[3:0] ones,ones_out,signs_out;
+	wire[3:0] tens,tens_out,hundreds_out;
+	wire[1:0] hundreds;
+	
+TwosComplement twoscomplement
+(
+	.Ai(in) ,					// input 
+	.Bo(wireO) 				   // output
+);
+	
+Binary2BCD binary2BCD
+(
+	.A({1'b0,wireO[6:0]}) ,	// input 
+	.ONES(ones) ,				// output 
+	.TENS(tens) ,				// output 
+	.HUNDREDS(hundreds) 		// output 
+);
+
+PIPO BCDones_PIPO
+(
+	.D(ones) ,	// input [N-1:0] D_sig
+	.CLK(CLK) ,	// input  CLK_sig
+	.CLR(CLR) ,	// input  CLR_sig
+	.Q(ones_out) 	// output [N-1:0] Q_sig
+);
+
+PIPO BCDtens_PIPO
+(
+	.D(tens) ,	// input [N-1:0] D_sig
+	.CLK(CLK) ,	// input  CLK_sig
+	.CLR(CLR) ,	// input  CLR_sig
+	.Q(tens_out) 	// output [N-1:0] Q_sig
+);
+
+PIPO BCDhundreds_PIPO
+(
+	.D({1'b1,1'b1,[1:0]hundreds}) ,	// input [N-1:0] D_sig
+	.CLK(CLK) ,	// input  CLK_sig
+	.CLR(CLR) ,	// input  CLR_sig
+	.Q(tens_out) 	// output [N-1:0] Q_sig
+);
+
+PIPO BCDsigns_PIPO
+(
+	.D({1'b1,1'b1,1'b1,wireO[7]}) ,	// input [N-1:0] D_sig
+	.CLK(CLK) ,	// input  CLK_sig
+	.CLR(CLR) ,	// input  CLR_sig
+	.Q(tens_out) 	// output [N-1:0] Q_sig
+);

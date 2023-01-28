@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/MyCSE2441Labs/LAB07/twistedcounter/simulation/qsim
+vhard_block
+Z1 !s110 1665763238
+!i10b 1
+!s100 oF9@MRD7iLe5akF=EHb3[3
+IoM9[QB2ARN:7ihkQZUInP2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1665763234
+Z4 8twistedcounter.vo
+Z5 Ftwistedcounter.vo
+L0 573
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1665763237.000000
+Z8 !s107 twistedcounter.vo|
+Z9 !s90 -work|work|twistedcounter.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vtwistedcounter
+R1
+!i10b 1
+!s100 2i5`KG9F5kkBk>58RjT7<1
+IgG2C`QoI5`cJO2b?VD3`[1
+R2
+R0
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vtwistedcounter_vlg_vec_tst
+R1
+!i10b 1
+!s100 lJI7IT9Q3mmME5lSP;=Gg0
+IE@]W6JYVomefd4]2eneNE3
+R2
+R0
+R3
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R6
+r1
+!s85 0
+31
+!s108 1665763238.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11

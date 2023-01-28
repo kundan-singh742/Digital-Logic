@@ -1,0 +1,15 @@
+//Verilog model for full adder/subtracter with Overflow
+module twosComplement(
+	input [3:0]A,B,
+	output [3:0]S,
+	output Cout);
+	wire [4:0] C;
+			assign C[0] = 1'b0;
+			
+			FAbehav s0 (.ai(A[0]),.bi(B[0]),.cini(C[0]),.si(S[0]),.couti(C[1]));
+			FAbehav s1 (.ai(A[1]),.bi(B[1]),.cini(C[1]),.si(S[1]),.couti(C[2]));
+			FAbehav s2 (.ai(A[2]),.bi(B[2]),.cini(C[2]),.si(S[2]),.couti(C[3]));
+			FAbehav s3 (.ai(A[3]),.bi(B[3]),.cini(C[3]),.si(S[3]),.couti(C[4]));
+					assign Cout = C[4];
+		endmodule
+		

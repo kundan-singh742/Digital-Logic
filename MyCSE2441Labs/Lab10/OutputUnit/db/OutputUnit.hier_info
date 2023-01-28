@@ -1,0 +1,292 @@
+|OutputUnit
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN1
+in[3] => in[3].IN1
+in[4] => in[4].IN1
+in[5] => in[5].IN1
+in[6] => in[6].IN1
+in[7] => in[7].IN2
+out[0] <= <GND>
+out[1] <= <GND>
+out[2] <= <GND>
+out[3] <= <GND>
+out[4] <= <GND>
+out[5] <= <GND>
+out[6] <= <GND>
+out[7] <= <GND>
+hex0[0] <= SignMagnitude:OnesPlace.a
+hex0[1] <= SignMagnitude:OnesPlace.b
+hex0[2] <= SignMagnitude:OnesPlace.c
+hex0[3] <= SignMagnitude:OnesPlace.d
+hex0[4] <= SignMagnitude:OnesPlace.e
+hex0[5] <= SignMagnitude:OnesPlace.f
+hex0[6] <= SignMagnitude:OnesPlace.g
+hex1[0] <= SignMagnitude:TensPlace.a
+hex1[1] <= SignMagnitude:TensPlace.b
+hex1[2] <= SignMagnitude:TensPlace.c
+hex1[3] <= SignMagnitude:TensPlace.d
+hex1[4] <= SignMagnitude:TensPlace.e
+hex1[5] <= SignMagnitude:TensPlace.f
+hex1[6] <= SignMagnitude:TensPlace.g
+hex2[0] <= SignMagnitude:HundredsPlace.a
+hex2[1] <= SignMagnitude:HundredsPlace.b
+hex2[2] <= SignMagnitude:HundredsPlace.c
+hex2[3] <= SignMagnitude:HundredsPlace.d
+hex2[4] <= SignMagnitude:HundredsPlace.e
+hex2[5] <= SignMagnitude:HundredsPlace.f
+hex2[6] <= SignMagnitude:HundredsPlace.g
+hex3[0] <= SignMagnitude:SignsPlace.a
+hex3[1] <= SignMagnitude:SignsPlace.b
+hex3[2] <= SignMagnitude:SignsPlace.c
+hex3[3] <= SignMagnitude:SignsPlace.d
+hex3[4] <= SignMagnitude:SignsPlace.e
+hex3[5] <= SignMagnitude:SignsPlace.f
+hex3[6] <= SignMagnitude:SignsPlace.g
+ones_out[0] <= ones[0].DB_MAX_OUTPUT_PORT_TYPE
+ones_out[1] <= ones[1].DB_MAX_OUTPUT_PORT_TYPE
+ones_out[2] <= ones[2].DB_MAX_OUTPUT_PORT_TYPE
+ones_out[3] <= ones[3].DB_MAX_OUTPUT_PORT_TYPE
+tens_out[0] <= tens[0].DB_MAX_OUTPUT_PORT_TYPE
+tens_out[1] <= tens[1].DB_MAX_OUTPUT_PORT_TYPE
+tens_out[2] <= tens[2].DB_MAX_OUTPUT_PORT_TYPE
+tens_out[3] <= tens[3].DB_MAX_OUTPUT_PORT_TYPE
+hundred_out[0] <= <GND>
+hundred_out[1] <= <GND>
+hundred_out[2] <= <GND>
+hundred_out[3] <= <GND>
+sign_out[0] <= in[7].DB_MAX_OUTPUT_PORT_TYPE
+sign_out[1] <= <VCC>
+sign_out[2] <= <VCC>
+sign_out[3] <= <VCC>
+
+
+|OutputUnit|TwosComplement:twoscomplement
+Ai[0] => comb.IN0
+Ai[1] => comb.IN0
+Ai[2] => comb.IN0
+Ai[3] => comb.IN0
+Ai[4] => comb.IN0
+Ai[5] => comb.IN0
+Ai[6] => comb.IN0
+Ai[7] => Ai[7].IN2
+Bo[0] <= HAbehav:s0.si
+Bo[1] <= HAbehav:s1.si
+Bo[2] <= HAbehav:s2.si
+Bo[3] <= HAbehav:s3.si
+Bo[4] <= HAbehav:s4.si
+Bo[5] <= HAbehav:s5.si
+Bo[6] <= HAbehav:s6.si
+Bo[7] <= HAbehav:s7.si
+
+
+|OutputUnit|TwosComplement:twoscomplement|HAbehav:s0
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|TwosComplement:twoscomplement|HAbehav:s1
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|TwosComplement:twoscomplement|HAbehav:s2
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|TwosComplement:twoscomplement|HAbehav:s3
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|TwosComplement:twoscomplement|HAbehav:s4
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|TwosComplement:twoscomplement|HAbehav:s5
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|TwosComplement:twoscomplement|HAbehav:s6
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|TwosComplement:twoscomplement|HAbehav:s7
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|Binary2BCD:binary2BCD
+A[0] => ONES[0].DATAIN
+A[1] => d5[0].IN1
+A[2] => d4[0].IN1
+A[3] => d3[0].IN1
+A[4] => d2[0].IN1
+A[5] => d1[0].IN1
+A[6] => d1[1].IN1
+A[7] => d1[2].IN1
+ONES[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+ONES[1] <= BCDConverter:m5.port1
+ONES[2] <= BCDConverter:m5.port1
+ONES[3] <= BCDConverter:m5.port1
+TENS[0] <= BCDConverter:m5.port1
+TENS[1] <= BCDConverter:m7.port1
+TENS[2] <= BCDConverter:m7.port1
+TENS[3] <= BCDConverter:m7.port1
+HUNDREDS[0] <= BCDConverter:m7.port1
+HUNDREDS[1] <= BCDConverter:m6.port1
+
+
+|OutputUnit|Binary2BCD:binary2BCD|BCDConverter:m1
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|Binary2BCD:binary2BCD|BCDConverter:m2
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|Binary2BCD:binary2BCD|BCDConverter:m3
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|Binary2BCD:binary2BCD|BCDConverter:m4
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|Binary2BCD:binary2BCD|BCDConverter:m5
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|Binary2BCD:binary2BCD|BCDConverter:m6
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|Binary2BCD:binary2BCD|BCDConverter:m7
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|SignMagnitude:OnesPlace
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|SignMagnitude:TensPlace
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|SignMagnitude:HundredsPlace
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|OutputUnit|SignMagnitude:SignsPlace
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

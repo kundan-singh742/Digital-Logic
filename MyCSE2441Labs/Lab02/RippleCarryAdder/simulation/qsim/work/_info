@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/MyCSE2441Labs/RippleCarryAdder/simulation/qsim
+vhard_block
+Z1 !s110 1662742380
+!i10b 1
+!s100 cT6D;l6T<7LT2_A:9aPU51
+ID;e6JIG>IKOh;TF@_1@dJ3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1662742380
+Z4 8RippleCarryAdder.vo
+Z5 FRippleCarryAdder.vo
+L0 580
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1662742380.000000
+Z8 !s107 RippleCarryAdder.vo|
+Z9 !s90 -work|work|RippleCarryAdder.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vRippleCarryAdder
+R1
+!i10b 1
+!s100 [Yo>8macb5Jn;1PWEO=UV2
+I5^>lQ;bKf]Z74Uno9>YMP1
+R2
+R0
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@ripple@carry@adder
+vRippleCarryAdder_vlg_vec_tst
+R1
+!i10b 1
+!s100 cmFEY1CDR]G4j5H5aLVoc0
+I9MlG0keG6CPe]WUUmOJ3=1
+R2
+R0
+w1662742379
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@ripple@carry@adder_vlg_vec_tst

@@ -1,0 +1,329 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0]'
+Slack : -12.062
+TNS   : -83.326
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK'
+Slack : -10.577
+TNS   : -134.708
+
+Type  : Slow 1200mV 85C Model Setup 'FSM:FSM_Controller|state[0]'
+Slack : -8.154
+TNS   : -54.939
+
+Type  : Slow 1200mV 85C Model Setup 'divideXN:divideXN_5MHz|OUT'
+Slack : -1.669
+TNS   : -3.257
+
+Type  : Slow 1200mV 85C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|OUT'
+Slack : -1.510
+TNS   : -16.384
+
+Type  : Slow 1200mV 85C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|OUT'
+Slack : -1.479
+TNS   : -16.049
+
+Type  : Slow 1200mV 85C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|OUT'
+Slack : -1.141
+TNS   : -6.305
+
+Type  : Slow 1200mV 85C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|OUT'
+Slack : -0.199
+TNS   : -0.666
+
+Type  : Slow 1200mV 85C Model Setup 'ONOFF'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|OUT'
+Slack : 0.023
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0]'
+Slack : 0.087
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|OUT'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ONOFF'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|OUT'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|OUT'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FSM:FSM_Controller|state[0]'
+Slack : 1.226
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'divideXN:divideXN_5MHz|OUT'
+Slack : 1.281
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -53.508
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ONOFF'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0]'
+Slack : -2.851
+TNS   : -253.304
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|OUT'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|OUT'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|OUT'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|OUT'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divideXN:divideXN_5MHz|OUT'
+Slack : -1.403
+TNS   : -2.806
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FSM:FSM_Controller|state[0]'
+Slack : 0.159
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0]'
+Slack : -11.229
+TNS   : -77.309
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK'
+Slack : -9.811
+TNS   : -122.473
+
+Type  : Slow 1200mV 0C Model Setup 'FSM:FSM_Controller|state[0]'
+Slack : -7.570
+TNS   : -50.824
+
+Type  : Slow 1200mV 0C Model Setup 'divideXN:divideXN_5MHz|OUT'
+Slack : -1.564
+TNS   : -3.114
+
+Type  : Slow 1200mV 0C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|OUT'
+Slack : -1.308
+TNS   : -14.154
+
+Type  : Slow 1200mV 0C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|OUT'
+Slack : -1.288
+TNS   : -13.945
+
+Type  : Slow 1200mV 0C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|OUT'
+Slack : -0.939
+TNS   : -5.088
+
+Type  : Slow 1200mV 0C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|OUT'
+Slack : -0.098
+TNS   : -0.265
+
+Type  : Slow 1200mV 0C Model Setup 'ONOFF'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0]'
+Slack : -0.035
+TNS   : -0.035
+
+Type  : Slow 1200mV 0C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|OUT'
+Slack : -0.026
+TNS   : -0.026
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|OUT'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ONOFF'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|OUT'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|OUT'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'FSM:FSM_Controller|state[0]'
+Slack : 1.090
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divideXN:divideXN_5MHz|OUT'
+Slack : 1.120
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -53.508
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ONOFF'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0]'
+Slack : -2.561
+TNS   : -227.647
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|OUT'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|OUT'
+Slack : -1.403
+TNS   : -15.433
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|OUT'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|OUT'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divideXN:divideXN_5MHz|OUT'
+Slack : -1.403
+TNS   : -2.806
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FSM:FSM_Controller|state[0]'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0]'
+Slack : -5.145
+TNS   : -35.216
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK'
+Slack : -4.174
+TNS   : -40.414
+
+Type  : Fast 1200mV 0C Model Setup 'FSM:FSM_Controller|state[0]'
+Slack : -4.036
+TNS   : -27.087
+
+Type  : Fast 1200mV 0C Model Setup 'divideXN:divideXN_5MHz|OUT'
+Slack : -0.316
+TNS   : -0.445
+
+Type  : Fast 1200mV 0C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|OUT'
+Slack : -0.247
+TNS   : -1.143
+
+Type  : Fast 1200mV 0C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|OUT'
+Slack : -0.048
+TNS   : -0.480
+
+Type  : Fast 1200mV 0C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|OUT'
+Slack : -0.034
+TNS   : -0.340
+
+Type  : Fast 1200mV 0C Model Setup 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|OUT'
+Slack : 0.485
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'ONOFF'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|OUT'
+Slack : 0.028
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|OUT'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ONOFF'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|OUT'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|OUT'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0]'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FSM:FSM_Controller|state[0]'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divideXN:divideXN_5MHz|OUT'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK'
+Slack : -3.000
+TNS   : -41.598
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ONOFF'
+Slack : -3.000
+TNS   : -4.098
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|OUT'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|OUT'
+Slack : -1.000
+TNS   : -11.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|OUT'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|OUT'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divideXN:divideXN_5MHz|OUT'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0]'
+Slack : -0.970
+TNS   : -55.618
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FSM:FSM_Controller|state[0]'
+Slack : 0.149
+TNS   : 0.000
+
+------------------------------------------------------------

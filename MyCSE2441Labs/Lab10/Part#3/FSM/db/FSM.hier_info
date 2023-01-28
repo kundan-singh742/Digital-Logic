@@ -1,0 +1,13 @@
+|FSM
+slow_clock => state[0].CLK
+slow_clock => state[1].CLK
+reset => state[0].ACLR
+reset => state[1].ACLR
+SEL[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+SEL[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+CAT[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+CAT[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+CAT[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+CAT[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+

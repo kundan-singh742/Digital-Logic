@@ -1,0 +1,6 @@
+|OnOffToggle
+OnOff => state.CLK
+IN => Mult0.IN0
+OUT <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+

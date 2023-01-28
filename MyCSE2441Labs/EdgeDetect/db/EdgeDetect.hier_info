@@ -1,0 +1,7 @@
+|EdgeDetect
+in => out.IN1
+in => in_delay.DATAIN
+clock => in_delay.CLK
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

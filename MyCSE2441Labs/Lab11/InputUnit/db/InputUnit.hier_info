@@ -1,0 +1,373 @@
+|InputUnit
+CLK => CLK.IN1
+CLR => CLR.IN1
+ROW[0] => ROW[0].IN1
+ROW[1] => ROW[1].IN1
+ROW[2] => ROW[2].IN1
+ROW[3] => ROW[3].IN1
+COLUMN[0] <= keypad_input:keypad_input_inst.col
+COLUMN[1] <= keypad_input:keypad_input_inst.col
+COLUMN[2] <= keypad_input:keypad_input_inst.col
+COLUMN[3] <= keypad_input:keypad_input_inst.col
+OUTPUT[0] <= TwosComplement:TwosComplement_inst.Bo
+OUTPUT[1] <= TwosComplement:TwosComplement_inst.Bo
+OUTPUT[2] <= TwosComplement:TwosComplement_inst.Bo
+OUTPUT[3] <= TwosComplement:TwosComplement_inst.Bo
+OUTPUT[4] <= TwosComplement:TwosComplement_inst.Bo
+OUTPUT[5] <= TwosComplement:TwosComplement_inst.Bo
+OUTPUT[6] <= TwosComplement:TwosComplement_inst.Bo
+OUTPUT[7] <= TwosComplement:TwosComplement_inst.Bo
+check <= <GND>
+junk <= <GND>
+
+
+|InputUnit|keypad_input:keypad_input_inst
+clk => clk.IN1
+reset => reset.IN1
+row[0] => row[0].IN1
+row[1] => row[1].IN1
+row[2] => row[2].IN1
+row[3] => row[3].IN1
+col[0] <= keypad_base:keypad_base.col
+col[1] <= keypad_base:keypad_base.col
+col[2] <= keypad_base:keypad_base.col
+col[3] <= keypad_base:keypad_base.col
+out[0] <= shift_reg:shift_reg.out
+out[1] <= shift_reg:shift_reg.out
+out[2] <= shift_reg:shift_reg.out
+out[3] <= shift_reg:shift_reg.out
+out[4] <= shift_reg:shift_reg.out
+out[5] <= shift_reg:shift_reg.out
+out[6] <= shift_reg:shift_reg.out
+out[7] <= shift_reg:shift_reg.out
+out[8] <= shift_reg:shift_reg.out
+out[9] <= shift_reg:shift_reg.out
+out[10] <= shift_reg:shift_reg.out
+out[11] <= shift_reg:shift_reg.out
+out[12] <= shift_reg:shift_reg.out
+out[13] <= shift_reg:shift_reg.out
+out[14] <= shift_reg:shift_reg.out
+out[15] <= shift_reg:shift_reg.out
+value[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= value[1].DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= value[2].DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= value[3].DB_MAX_OUTPUT_PORT_TYPE
+trig <= trig.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|keypad_input:keypad_input_inst|keypad_base:keypad_base
+clk => clk.IN1
+row[0] => inv_row[0].IN2
+row[1] => inv_row[1].IN2
+row[2] => inv_row[2].IN2
+row[3] => inv_row[3].IN2
+col[0] <= col[0].DB_MAX_OUTPUT_PORT_TYPE
+col[1] <= col[1].DB_MAX_OUTPUT_PORT_TYPE
+col[2] <= col[2].DB_MAX_OUTPUT_PORT_TYPE
+col[3] <= col[3].DB_MAX_OUTPUT_PORT_TYPE
+value[0] <= keypad_decoder:keypad_key_decoder.value
+value[1] <= keypad_decoder:keypad_key_decoder.value
+value[2] <= keypad_decoder:keypad_key_decoder.value
+value[3] <= keypad_decoder:keypad_key_decoder.value
+valid <= valid.DB_MAX_OUTPUT_PORT_TYPE
+slow_clock <= slow_clock.DB_MAX_OUTPUT_PORT_TYPE
+sense <= keypad_fsm:keypad_fsm.sense
+valid_digit <= keypad_decoder:keypad_key_decoder.valid
+inv_row[0] <= inv_row[0].DB_MAX_OUTPUT_PORT_TYPE
+inv_row[1] <= inv_row[1].DB_MAX_OUTPUT_PORT_TYPE
+inv_row[2] <= inv_row[2].DB_MAX_OUTPUT_PORT_TYPE
+inv_row[3] <= inv_row[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|keypad_input:keypad_input_inst|keypad_base:keypad_base|clock_div:keypad_clock_divider
+clk => clk_track.CLK
+clk => r_reg[0].CLK
+clk => r_reg[1].CLK
+clk => r_reg[2].CLK
+clk => r_reg[3].CLK
+clk => r_reg[4].CLK
+clk => r_reg[5].CLK
+clk => r_reg[6].CLK
+clk => r_reg[7].CLK
+clk => r_reg[8].CLK
+clk => r_reg[9].CLK
+clk => r_reg[10].CLK
+clk => r_reg[11].CLK
+clk => r_reg[12].CLK
+clk => r_reg[13].CLK
+clk => r_reg[14].CLK
+clk => r_reg[15].CLK
+clk => r_reg[16].CLK
+clk => r_reg[17].CLK
+clk => r_reg[18].CLK
+clk => r_reg[19].CLK
+clk => r_reg[20].CLK
+clk => r_reg[21].CLK
+clk => r_reg[22].CLK
+clk => r_reg[23].CLK
+clk => r_reg[24].CLK
+clk => r_reg[25].CLK
+clk => r_reg[26].CLK
+clk => r_reg[27].CLK
+clk => r_reg[28].CLK
+clk => r_reg[29].CLK
+clk => r_reg[30].CLK
+clk => r_reg[31].CLK
+reset => clk_track.ACLR
+reset => r_reg[0].ACLR
+reset => r_reg[1].ACLR
+reset => r_reg[2].ACLR
+reset => r_reg[3].ACLR
+reset => r_reg[4].ACLR
+reset => r_reg[5].ACLR
+reset => r_reg[6].ACLR
+reset => r_reg[7].ACLR
+reset => r_reg[8].ACLR
+reset => r_reg[9].ACLR
+reset => r_reg[10].ACLR
+reset => r_reg[11].ACLR
+reset => r_reg[12].ACLR
+reset => r_reg[13].ACLR
+reset => r_reg[14].ACLR
+reset => r_reg[15].ACLR
+reset => r_reg[16].ACLR
+reset => r_reg[17].ACLR
+reset => r_reg[18].ACLR
+reset => r_reg[19].ACLR
+reset => r_reg[20].ACLR
+reset => r_reg[21].ACLR
+reset => r_reg[22].ACLR
+reset => r_reg[23].ACLR
+reset => r_reg[24].ACLR
+reset => r_reg[25].ACLR
+reset => r_reg[26].ACLR
+reset => r_reg[27].ACLR
+reset => r_reg[28].ACLR
+reset => r_reg[29].ACLR
+reset => r_reg[30].ACLR
+reset => r_reg[31].ACLR
+clk_out <= clk_track.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|keypad_input:keypad_input_inst|keypad_base:keypad_base|keypad_fsm:keypad_fsm
+clk => col[0]~reg0.CLK
+clk => col[1]~reg0.CLK
+clk => col[2]~reg0.CLK
+clk => col[3]~reg0.CLK
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+clk => state[2]~reg0.CLK
+clk => state[3]~reg0.CLK
+row[0] => trig.IN0
+row[1] => trig.IN1
+row[2] => trig.IN1
+row[3] => trig.IN1
+col[0] <= col[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[1] <= col[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[2] <= col[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[3] <= col[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sense <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[3] <= state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+trig <= trig.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|keypad_input:keypad_input_inst|keypad_base:keypad_base|keypad_decoder:keypad_key_decoder
+row[0] => Decoder0.IN3
+row[1] => Decoder0.IN2
+row[2] => Decoder0.IN1
+row[3] => Decoder0.IN0
+col[0] => Decoder0.IN7
+col[1] => Decoder0.IN6
+col[2] => Decoder0.IN5
+col[3] => Decoder0.IN4
+value[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+valid <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|keypad_input:keypad_input_inst|shift_reg:shift_reg
+trig => out[0]~reg0.CLK
+trig => out[1]~reg0.CLK
+trig => out[2]~reg0.CLK
+trig => out[3]~reg0.CLK
+trig => out[4]~reg0.CLK
+trig => out[5]~reg0.CLK
+trig => out[6]~reg0.CLK
+trig => out[7]~reg0.CLK
+trig => out[8]~reg0.CLK
+trig => out[9]~reg0.CLK
+trig => out[10]~reg0.CLK
+trig => out[11]~reg0.CLK
+trig => out[12]~reg0.CLK
+trig => out[13]~reg0.CLK
+trig => out[14]~reg0.CLK
+trig => out[15]~reg0.CLK
+reset => out[0]~reg0.ACLR
+reset => out[1]~reg0.ACLR
+reset => out[2]~reg0.ACLR
+reset => out[3]~reg0.ACLR
+reset => out[4]~reg0.ACLR
+reset => out[5]~reg0.ACLR
+reset => out[6]~reg0.ACLR
+reset => out[7]~reg0.ACLR
+reset => out[8]~reg0.ACLR
+reset => out[9]~reg0.ACLR
+reset => out[10]~reg0.ACLR
+reset => out[11]~reg0.ACLR
+reset => out[12]~reg0.ACLR
+reset => out[13]~reg0.ACLR
+reset => out[14]~reg0.ACLR
+reset => out[15]~reg0.ACLR
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+dir => out.OUTPUTSELECT
+in[0] => out.DATAB
+in[0] => out.DATAA
+in[1] => out.DATAB
+in[1] => out.DATAA
+in[2] => out.DATAB
+in[2] => out.DATAA
+in[3] => out.DATAB
+in[3] => out.DATAA
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|BCD2BinarySM:BCD2BinarySM_inst
+BCD[0] => Add3.IN16
+BCD[1] => Add3.IN15
+BCD[2] => Add3.IN14
+BCD[3] => Add3.IN13
+BCD[4] => Add1.IN8
+BCD[4] => Add2.IN14
+BCD[5] => Add1.IN7
+BCD[5] => Add2.IN13
+BCD[6] => Add1.IN5
+BCD[6] => Add1.IN6
+BCD[7] => Add1.IN3
+BCD[7] => Add1.IN4
+BCD[8] => Mult0.IN10
+BCD[9] => Mult0.IN9
+BCD[10] => Mult0.IN8
+BCD[11] => Mult0.IN7
+BCD[12] => ~NO_FANOUT~
+BCD[13] => ~NO_FANOUT~
+BCD[14] => ~NO_FANOUT~
+BCD[15] => Add0.IN2
+binarySM[0] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[1] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[2] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[3] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[4] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[5] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[6] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[7] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|TwosComplement:TwosComplement_inst
+Ai[0] => comb.IN0
+Ai[1] => comb.IN0
+Ai[2] => comb.IN0
+Ai[3] => comb.IN0
+Ai[4] => comb.IN0
+Ai[5] => comb.IN0
+Ai[6] => comb.IN0
+Ai[7] => Ai[7].IN2
+Bo[0] <= HAbehav:s0.si
+Bo[1] <= HAbehav:s1.si
+Bo[2] <= HAbehav:s2.si
+Bo[3] <= HAbehav:s3.si
+Bo[4] <= HAbehav:s4.si
+Bo[5] <= HAbehav:s5.si
+Bo[6] <= HAbehav:s6.si
+Bo[7] <= HAbehav:s7.si
+
+
+|InputUnit|TwosComplement:TwosComplement_inst|HAbehav:s0
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|TwosComplement:TwosComplement_inst|HAbehav:s1
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|TwosComplement:TwosComplement_inst|HAbehav:s2
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|TwosComplement:TwosComplement_inst|HAbehav:s3
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|TwosComplement:TwosComplement_inst|HAbehav:s4
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|TwosComplement:TwosComplement_inst|HAbehav:s5
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|TwosComplement:TwosComplement_inst|HAbehav:s6
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|InputUnit|TwosComplement:TwosComplement_inst|HAbehav:s7
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+

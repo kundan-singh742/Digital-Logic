@@ -1,0 +1,27 @@
+|EightBitCounter
+COUNT => y[0]~reg0.CLK
+COUNT => y[1]~reg0.CLK
+COUNT => y[2]~reg0.CLK
+COUNT => y[3]~reg0.CLK
+COUNT => y[4]~reg0.CLK
+COUNT => y[5]~reg0.CLK
+COUNT => y[6]~reg0.CLK
+COUNT => y[7]~reg0.CLK
+CLEAR => y[0]~reg0.ACLR
+CLEAR => y[1]~reg0.ACLR
+CLEAR => y[2]~reg0.ACLR
+CLEAR => y[3]~reg0.ACLR
+CLEAR => y[4]~reg0.ACLR
+CLEAR => y[5]~reg0.ACLR
+CLEAR => y[6]~reg0.ACLR
+CLEAR => y[7]~reg0.ACLR
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

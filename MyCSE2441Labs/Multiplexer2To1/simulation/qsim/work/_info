@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/MyCSE2441Homeworks/Multiplexer2To1/simulation/qsim
+vhard_block
+Z1 !s110 1667521563
+!i10b 1
+!s100 4<eZPSX5:@JO5ZMnkaRMh2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IAadhGK4z23@L679een?iK1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1667521562
+Z5 8Multiplexer2To1.vo
+Z6 FMultiplexer2To1.vo
+!i122 6
+L0 435 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1667521562.000000
+Z9 !s107 Multiplexer2To1.vo|
+Z10 !s90 -work|work|Multiplexer2To1.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vMultiplexer2To1
+R1
+!i10b 1
+!s100 <GELF5ZdaY94NA?X]`=cz0
+R2
+IMVFdB=bg;c_U_a;fRCiKe3
+R3
+R0
+R4
+R5
+R6
+!i122 6
+L0 32 402
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@multiplexer2@to1
+vMultiplexer2To1_vlg_vec_tst
+R1
+!i10b 1
+!s100 SI7KOaN0fDeY=fHZR^`Gz1
+R2
+Il7NIJJVX8?W_mJ@dIIYQI0
+R3
+R0
+w1667521560
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 7
+L0 30 94
+R7
+r1
+!s85 0
+31
+!s108 1667521563.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@multiplexer2@to1_vlg_vec_tst

@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/MyCSE2441Labs/Lab10/TwosComplement/simulation/qsim
+vhard_block
+Z1 !s110 1668184177
+!i10b 1
+!s100 MJVjzNNc54bFQeYQSLS_D3
+I[43Nmg@G4519B4W4ACPDo2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1668184178
+Z4 8TwosComplement.vo
+Z5 FTwosComplement.vo
+L0 557
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1668184177.000000
+Z8 !s107 TwosComplement.vo|
+Z9 !s90 -work|work|TwosComplement.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vTwosComplement
+R1
+!i10b 1
+!s100 nW4T;RVz;HTLVP2BhfUkJ2
+IXV72J2Cc6J4BTz]V[JN4V0
+R2
+R0
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@twos@complement
+vTwosComplement_vlg_vec_tst
+R1
+!i10b 1
+!s100 2j=mc2D?eK]5<h4a2YJG[3
+IMe1IR6ZU:mZBXALS^PnYk0
+R2
+R0
+w1668184176
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@twos@complement_vlg_vec_tst

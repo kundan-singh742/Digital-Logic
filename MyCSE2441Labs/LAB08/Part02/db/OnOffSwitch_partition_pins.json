@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "OUT_sig",
+					"strict" : false
+				},
+				{
+					"name" : "reset_sig",
+					"strict" : false
+				},
+				{
+					"name" : "OnOff_sig",
+					"strict" : false
+				},
+				{
+					"name" : "clock_sig",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

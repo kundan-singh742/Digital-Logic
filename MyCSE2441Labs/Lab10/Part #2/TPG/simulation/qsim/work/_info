@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/MyCSE2441Labs/Lab10/Part #2/TPG/simulation/qsim
+vhard_block
+Z1 !s110 1668550694
+!i10b 1
+!s100 1fTdUeVg9L0[iIVmgC`R<0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6K7zd`HbJg?69>81n;4`10
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1668550694
+Z5 8TPG.vo
+Z6 FTPG.vo
+!i122 6
+L0 2140 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1668550694.000000
+Z9 !s107 TPG.vo|
+Z10 !s90 -work|work|TPG.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vTPG
+R1
+!i10b 1
+!s100 mFZL4gmEN^FfTU:=X5ISO2
+R2
+InF6C4L8G82JgW6H3^H;=@0
+R3
+R0
+R4
+R5
+R6
+!i122 6
+L0 32 2107
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@t@p@g
+vTPG_vlg_vec_tst
+!s110 1668550695
+!i10b 1
+!s100 BiBgY_43`N[WK@=eX^oCj1
+R2
+ICCP3[iW?ibi`eRM8J6mek2
+R3
+R0
+w1668550692
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 7
+L0 30 50
+R7
+r1
+!s85 0
+31
+!s108 1668550695.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@t@p@g_vlg_vec_tst

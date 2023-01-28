@@ -1,0 +1,8 @@
+//Verilog Model of N-bit register with active-low asynchronous clear
+module regiser
+(
+	parameter N=8;
+	input [N-1:0]D;
+	input CLK,CLR;
+	output reg[N-1:0]Q;
+);

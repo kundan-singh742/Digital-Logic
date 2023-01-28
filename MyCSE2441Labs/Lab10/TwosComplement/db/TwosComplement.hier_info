@@ -1,0 +1,75 @@
+|TwosComplement
+Ai[0] => comb.IN0
+Ai[1] => comb.IN0
+Ai[2] => comb.IN0
+Ai[3] => comb.IN0
+Ai[4] => comb.IN0
+Ai[5] => comb.IN0
+Ai[6] => comb.IN0
+Ai[7] => Ai[7].IN2
+Bo[0] << HAbehav:s0.si
+Bo[1] << HAbehav:s1.si
+Bo[2] << HAbehav:s2.si
+Bo[3] << HAbehav:s3.si
+Bo[4] << HAbehav:s4.si
+Bo[5] << HAbehav:s5.si
+Bo[6] << HAbehav:s6.si
+Bo[7] << HAbehav:s7.si
+
+
+|TwosComplement|HAbehav:s0
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwosComplement|HAbehav:s1
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwosComplement|HAbehav:s2
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwosComplement|HAbehav:s3
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwosComplement|HAbehav:s4
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwosComplement|HAbehav:s5
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwosComplement|HAbehav:s6
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwosComplement|HAbehav:s7
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+si <= si.DB_MAX_OUTPUT_PORT_TYPE
+couti <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+

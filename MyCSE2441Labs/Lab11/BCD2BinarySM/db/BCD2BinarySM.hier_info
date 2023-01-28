@@ -1,0 +1,31 @@
+|BCD2BinarySM
+BCD[0] => Add3.IN16
+BCD[1] => Add3.IN15
+BCD[2] => Add3.IN14
+BCD[3] => Add3.IN13
+BCD[4] => Add1.IN8
+BCD[4] => Add2.IN14
+BCD[5] => Add1.IN7
+BCD[5] => Add2.IN13
+BCD[6] => Add1.IN5
+BCD[6] => Add1.IN6
+BCD[7] => Add1.IN3
+BCD[7] => Add1.IN4
+BCD[8] => Mult0.IN10
+BCD[9] => Mult0.IN9
+BCD[10] => Mult0.IN8
+BCD[11] => Mult0.IN7
+BCD[12] => ~NO_FANOUT~
+BCD[13] => ~NO_FANOUT~
+BCD[14] => ~NO_FANOUT~
+BCD[15] => Add0.IN2
+binarySM[0] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[1] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[2] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[3] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[4] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[5] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[6] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+binarySM[7] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+
+

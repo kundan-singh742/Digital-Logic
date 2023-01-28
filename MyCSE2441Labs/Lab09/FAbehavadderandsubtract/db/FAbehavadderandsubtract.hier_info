@@ -1,0 +1,94 @@
+|FAbehavadderandsubtract
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => comb.IN0
+B[1] => comb.IN0
+B[2] => comb.IN0
+B[3] => comb.IN0
+B[4] => comb.IN0
+B[5] => comb.IN0
+B[6] => comb.IN0
+B[7] => comb.IN0
+Cxor => C[0].IN1
+S[0] <= FAbehav:s0.si
+S[1] <= FAbehav:s1.si
+S[2] <= FAbehav:s2.si
+S[3] <= FAbehav:s3.si
+S[4] <= FAbehav:s4.si
+S[5] <= FAbehav:s5.si
+S[6] <= FAbehav:s6.si
+S[7] <= FAbehav:s7.si
+Cout <= FAbehav:s7.couti
+OVR <= OVR.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FAbehavadderandsubtract|FAbehav:s0
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FAbehavadderandsubtract|FAbehav:s1
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FAbehavadderandsubtract|FAbehav:s2
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FAbehavadderandsubtract|FAbehav:s3
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FAbehavadderandsubtract|FAbehav:s4
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FAbehavadderandsubtract|FAbehav:s5
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FAbehavadderandsubtract|FAbehav:s6
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FAbehavadderandsubtract|FAbehav:s7
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

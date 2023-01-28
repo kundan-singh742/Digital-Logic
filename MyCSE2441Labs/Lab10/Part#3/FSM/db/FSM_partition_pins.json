@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SEL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CAT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CAT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CAT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CAT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "slow_clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,16 @@
+|keypad_decoder
+row[0] => Decoder0.IN3
+row[1] => Decoder0.IN2
+row[2] => Decoder0.IN1
+row[3] => Decoder0.IN0
+col[0] => Decoder0.IN7
+col[1] => Decoder0.IN6
+col[2] => Decoder0.IN5
+col[3] => Decoder0.IN4
+value[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+valid <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+
+

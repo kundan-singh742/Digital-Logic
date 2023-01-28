@@ -1,0 +1,12 @@
+module Calculator
+(
+	input Clock, Clear
+);
+
+divideXN #(7'd50, 3'd7) ClockTo1MHz
+(
+	.CLK(CLK_sig) ,	// input  CLK_sig
+	.CLEAR(CLEAR_sig) ,	// input  CLEAR_sig
+	.COUNT(COUNT_sig) ,	// output [M-1:0] COUNT_sig
+	.OUT(OUT_sig) 	// output  OUT_sig
+)

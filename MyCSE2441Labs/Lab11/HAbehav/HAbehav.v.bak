@@ -1,0 +1,11 @@
+module HAbehv 
+(
+	input A,B,
+	output reg sum, carry
+);
+	always @(A,B)
+		begin
+			sum = A^B;   //xor
+			carry = A&B; //and
+		
+endmodule 

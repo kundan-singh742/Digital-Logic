@@ -1,0 +1,286 @@
+|zeroto59minutes
+clock_sig => clock_sig.IN1
+reset_sig => reset_sig.IN5
+OnOff_sig => OnOff_sig.IN1
+hex0[0] << BinaryToNine:BinaryToNine_inst1.a
+hex0[1] << BinaryToNine:BinaryToNine_inst1.b
+hex0[2] << BinaryToNine:BinaryToNine_inst1.c
+hex0[3] << BinaryToNine:BinaryToNine_inst1.d
+hex0[4] << BinaryToNine:BinaryToNine_inst1.e
+hex0[5] << BinaryToNine:BinaryToNine_inst1.f
+hex0[6] << BinaryToNine:BinaryToNine_inst1.g
+hex1[0] << BinaryToNine:BinaryToNine_inst2.a
+hex1[1] << BinaryToNine:BinaryToNine_inst2.b
+hex1[2] << BinaryToNine:BinaryToNine_inst2.c
+hex1[3] << BinaryToNine:BinaryToNine_inst2.d
+hex1[4] << BinaryToNine:BinaryToNine_inst2.e
+hex1[5] << BinaryToNine:BinaryToNine_inst2.f
+hex1[6] << BinaryToNine:BinaryToNine_inst2.g
+hex2[0] << BinaryToNine:BinaryToNine_inst3.a
+hex2[1] << BinaryToNine:BinaryToNine_inst3.b
+hex2[2] << BinaryToNine:BinaryToNine_inst3.c
+hex2[3] << BinaryToNine:BinaryToNine_inst3.d
+hex2[4] << BinaryToNine:BinaryToNine_inst3.e
+hex2[5] << BinaryToNine:BinaryToNine_inst3.f
+hex2[6] << BinaryToNine:BinaryToNine_inst3.g
+hex3[0] << BinaryToNine:BinaryToNine_inst4.a
+hex3[1] << BinaryToNine:BinaryToNine_inst4.b
+hex3[2] << BinaryToNine:BinaryToNine_inst4.c
+hex3[3] << BinaryToNine:BinaryToNine_inst4.d
+hex3[4] << BinaryToNine:BinaryToNine_inst4.e
+hex3[5] << BinaryToNine:BinaryToNine_inst4.f
+hex3[6] << BinaryToNine:BinaryToNine_inst4.g
+
+
+|zeroto59minutes|OnOffSwitch:OnOffSwitch_inst
+clock_sig => clock_sig.IN1
+reset_sig => reset_sig.IN1
+OnOff_sig => OnOff_sig.IN1
+OUT_sig <= OnOffToggle:OnOffToggle_inst.OUT
+
+
+|zeroto59minutes|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst
+clock => clock.IN1
+reset => reset.IN4
+OneHz <= divideXN:div1000H.OUT
+
+
+|zeroto59minutes|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLK => COUNT[4]~reg0.CLK
+CLK => COUNT[5]~reg0.CLK
+CLK => COUNT[6]~reg0.CLK
+CLK => COUNT[7]~reg0.CLK
+CLK => COUNT[8]~reg0.CLK
+CLK => COUNT[9]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => COUNT[4]~reg0.ACLR
+CLEAR => COUNT[5]~reg0.ACLR
+CLEAR => COUNT[6]~reg0.ACLR
+CLEAR => COUNT[7]~reg0.ACLR
+CLEAR => COUNT[8]~reg0.ACLR
+CLEAR => COUNT[9]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[4] <= COUNT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[5] <= COUNT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[6] <= COUNT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[7] <= COUNT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[8] <= COUNT[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[9] <= COUNT[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLK => COUNT[4]~reg0.CLK
+CLK => COUNT[5]~reg0.CLK
+CLK => COUNT[6]~reg0.CLK
+CLK => COUNT[7]~reg0.CLK
+CLK => COUNT[8]~reg0.CLK
+CLK => COUNT[9]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => COUNT[4]~reg0.ACLR
+CLEAR => COUNT[5]~reg0.ACLR
+CLEAR => COUNT[6]~reg0.ACLR
+CLEAR => COUNT[7]~reg0.ACLR
+CLEAR => COUNT[8]~reg0.ACLR
+CLEAR => COUNT[9]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[4] <= COUNT[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[5] <= COUNT[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[6] <= COUNT[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[7] <= COUNT[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[8] <= COUNT[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[9] <= COUNT[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|OnOffSwitch:OnOffSwitch_inst|OnOffToggle:OnOffToggle_inst
+OnOff => state.CLK
+IN => Mult0.IN0
+OUT <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|divideXN:divideXN_inst1
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|divideXN:divideXN_inst2
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|BinaryToNine:BinaryToNine_inst1
+w0 => Decoder0.IN0
+w1 => Decoder0.IN1
+w2 => Decoder0.IN2
+w3 => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|BinaryToNine:BinaryToNine_inst2
+w0 => Decoder0.IN0
+w1 => Decoder0.IN1
+w2 => Decoder0.IN2
+w3 => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|divideXN:divideXN_inst3
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|divideXN:divideXN_inst4
+CLK => OUT~reg0.CLK
+CLK => COUNT[0]~reg0.CLK
+CLK => COUNT[1]~reg0.CLK
+CLK => COUNT[2]~reg0.CLK
+CLK => COUNT[3]~reg0.CLK
+CLEAR => COUNT[0]~reg0.ACLR
+CLEAR => COUNT[1]~reg0.ACLR
+CLEAR => COUNT[2]~reg0.ACLR
+CLEAR => COUNT[3]~reg0.ACLR
+CLEAR => OUT~reg0.ENA
+COUNT[0] <= COUNT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[1] <= COUNT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[2] <= COUNT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+COUNT[3] <= COUNT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|BinaryToNine:BinaryToNine_inst3
+w0 => Decoder0.IN0
+w1 => Decoder0.IN1
+w2 => Decoder0.IN2
+w3 => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|zeroto59minutes|BinaryToNine:BinaryToNine_inst4
+w0 => Decoder0.IN0
+w1 => Decoder0.IN1
+w2 => Decoder0.IN2
+w3 => Decoder0.IN3
+a <= a$latch.DB_MAX_OUTPUT_PORT_TYPE
+b <= b$latch.DB_MAX_OUTPUT_PORT_TYPE
+c <= c$latch.DB_MAX_OUTPUT_PORT_TYPE
+d <= d$latch.DB_MAX_OUTPUT_PORT_TYPE
+e <= e$latch.DB_MAX_OUTPUT_PORT_TYPE
+f <= f$latch.DB_MAX_OUTPUT_PORT_TYPE
+g <= g$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

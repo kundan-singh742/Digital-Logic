@@ -1,0 +1,12 @@
+module TwosComplement #(parameter N=8)
+(
+	input [N-1:0]Ai,
+	output [N-1:0]Si
+);
+	wire[N-2:0]Ci;
+	HAbehav s0 (.ai(A[0]^A[7]),.bi(A[7]),.si(si[0]),.couti(ci[0]));
+	HAbehav s1 (.ai(A[1]^A[7]),.bi(ci[0]),.si(si[1]),.couti(ci[1]));
+	HAbehav s2 (.ai(A[2]^A[7]),.bi(ci[1]),.si(si[2]),.couti(ci[2]));
+	HAbehav s3 (.ai(A[3]^A[7]),.bi(ci[2]),.si(si[3]),.couti(ci[3]));
+	
+endmodule

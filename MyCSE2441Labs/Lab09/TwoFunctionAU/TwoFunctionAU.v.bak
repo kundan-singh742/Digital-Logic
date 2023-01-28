@@ -1,0 +1,18 @@
+module TwoFunctionAU
+(
+	input 
+	output RegisterO
+);
+	wire
+	
+	register #(4'd8) registerA
+(
+	.D(D_sig) ,			// input [7:0] D_sig
+	.Q(Q_sig) ,			// output [7:0] Q_sig
+	.CLK(CLK_sig) ,	// input  CLK_sig
+	.CLR(CLR_sig) 		// input  CLR_sig
+);
+	
+	
+	
+	

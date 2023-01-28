@@ -1,0 +1,657 @@
+Analysis & Synthesis report for CalculatorOU
+Fri Nov 18 09:10:18 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5
+ 12. Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10
+ 13. Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L
+ 14. Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H
+ 15. Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|OnOffToggle:OnOffToggle_inst
+ 16. Parameter Settings for User Entity Instance: TPG:TPG_inst|EightBitCounter:EightBitCounter_inst
+ 17. Port Connectivity Checks: "OutputUnit:OutputUnit_inst|SignMagnitude:SignsPlace"
+ 18. Port Connectivity Checks: "OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace"
+ 19. Port Connectivity Checks: "OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m6"
+ 20. Port Connectivity Checks: "OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m1"
+ 21. Port Connectivity Checks: "OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD"
+ 22. Port Connectivity Checks: "OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s7"
+ 23. Port Connectivity Checks: "OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s6"
+ 24. Port Connectivity Checks: "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H"
+ 25. Port Connectivity Checks: "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L"
+ 26. Port Connectivity Checks: "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10"
+ 27. Port Connectivity Checks: "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 18 09:10:18 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; CalculatorOU                                ;
+; Top-level Entity Name              ; CalculatorOU                                ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 120                                         ;
+;     Total combinational functions  ; 120                                         ;
+;     Dedicated logic registers      ; 40                                          ;
+; Total registers                    ; 40                                          ;
+; Total pins                         ; 39                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; CalculatorOU       ; CalculatorOU       ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++------------------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type              ; File Name with Absolute Path                                     ; Library ;
++------------------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+; ../../../LAB08/Part01/oneHzclock.v       ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/LAB08/Part01/oneHzclock.v                       ;         ;
+; ../../../LAB08/Part00/divideXN.v         ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/LAB08/Part00/divideXN.v                         ;         ;
+; ../../../LAB08/OnOffToggle/OnOffToggle.v ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/LAB08/OnOffToggle/OnOffToggle.v                 ;         ;
+; ../../../LAB08/Part02/OnOffSwitch.v      ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/LAB08/Part02/OnOffSwitch.v                      ;         ;
+; ../SignMagnitude/SignMagnitude.v         ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v     ;         ;
+; ../HAbehav/HAbehav.v                     ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/Lab10/Part #2/HAbehav/HAbehav.v                 ;         ;
+; ../Binary2BCD/Binary2BCD.v               ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/Lab10/Part #2/Binary2BCD/Binary2BCD.v           ;         ;
+; ../TwosComplement/TwosComplement.v       ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/Lab10/Part #2/TwosComplement/TwosComplement.v   ;         ;
+; ../OutputUnit/OutputUnit.v               ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/Lab10/Part #2/OutputUnit/OutputUnit.v           ;         ;
+; ../TPG/TPG.v                             ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/Lab10/Part #2/TPG/TPG.v                         ;         ;
+; ../EightBitCounter/EightBitCounter.v     ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/Lab10/Part #2/EightBitCounter/EightBitCounter.v ;         ;
+; ../BCDConverter/BCDConverter.v           ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/Lab10/Part #2/BCDConverter/BCDConverter.v       ;         ;
+; CalculatorOU.v                           ; yes             ; User Verilog HDL File  ; D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v       ;         ;
++------------------------------------------+-----------------+------------------------+------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 120         ;
+;                                             ;             ;
+; Total combinational functions               ; 120         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 62          ;
+;     -- 3 input functions                    ; 22          ;
+;     -- <=2 input functions                  ; 36          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 96          ;
+;     -- arithmetic mode                      ; 24          ;
+;                                             ;             ;
+; Total registers                             ; 40          ;
+;     -- Dedicated logic registers            ; 40          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 39          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clear~input ;
+; Maximum fan-out                             ; 39          ;
+; Total fan-out                               ; 603         ;
+; Average fan-out                             ; 2.53        ;
++---------------------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                       ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                  ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |CalculatorOU                                ; 120 (1)             ; 40 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 39   ; 0            ; 0          ; |CalculatorOU                                                                                        ; CalculatorOU    ; work         ;
+;    |OutputUnit:OutputUnit_inst|              ; 72 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst                                                             ; OutputUnit      ; work         ;
+;       |Binary2BCD:binary2BCD|                ; 25 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD                                       ; Binary2BCD      ; work         ;
+;          |BCDConverter:m2|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m2                       ; BCDConverter    ; work         ;
+;          |BCDConverter:m3|                   ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m3                       ; BCDConverter    ; work         ;
+;          |BCDConverter:m4|                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m4                       ; BCDConverter    ; work         ;
+;          |BCDConverter:m5|                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m5                       ; BCDConverter    ; work         ;
+;          |BCDConverter:m7|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m7                       ; BCDConverter    ; work         ;
+;       |SignMagnitude:OnesPlace|              ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace                                     ; SignMagnitude   ; work         ;
+;       |SignMagnitude:TensPlace|              ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace                                     ; SignMagnitude   ; work         ;
+;       |TwosComplement:twoscomplement|        ; 12 (3)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement                               ; TwosComplement  ; work         ;
+;          |HAbehav:s1|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s1                    ; HAbehav         ; work         ;
+;          |HAbehav:s2|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s2                    ; HAbehav         ; work         ;
+;          |HAbehav:s3|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s3                    ; HAbehav         ; work         ;
+;          |HAbehav:s4|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s4                    ; HAbehav         ; work         ;
+;          |HAbehav:s5|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s5                    ; HAbehav         ; work         ;
+;          |HAbehav:s6|                        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s6                    ; HAbehav         ; work         ;
+;    |TPG:TPG_inst|                            ; 47 (0)              ; 40 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|TPG:TPG_inst                                                                           ; TPG             ; work         ;
+;       |EightBitCounter:EightBitCounter_inst| ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|TPG:TPG_inst|EightBitCounter:EightBitCounter_inst                                      ; EightBitCounter ; work         ;
+;       |OnOffSwitch:OnOffSwitch_inst|         ; 39 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst                                              ; OnOffSwitch     ; work         ;
+;          |OnOffToggle:OnOffToggle_inst|      ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|OnOffToggle:OnOffToggle_inst                 ; OnOffToggle     ; work         ;
+;          |oneHzclock:oneHzclock_inst|        ; 37 (0)              ; 31 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst                   ; oneHzclock      ; work         ;
+;             |divideXN:div1000H|              ; 14 (14)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H ; divideXN        ; work         ;
+;             |divideXN:div1000L|              ; 14 (14)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L ; divideXN        ; work         ;
+;             |divideXN:div10|                 ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10    ; divideXN        ; work         ;
+;             |divideXN:div5|                  ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5     ; divideXN        ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                        ;
++------------------------------------------------------+------------------------------------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal                                        ; Free of Timing Hazards ;
++------------------------------------------------------+------------------------------------------------------------+------------------------+
+; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|a ; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|WideOr1 ; yes                    ;
+; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|b ; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|WideOr1 ; yes                    ;
+; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|c ; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|WideOr1 ; yes                    ;
+; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|d ; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|WideOr1 ; yes                    ;
+; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|e ; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|WideOr1 ; yes                    ;
+; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|f ; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|WideOr1 ; yes                    ;
+; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|g ; OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|WideOr1 ; yes                    ;
+; Number of user-specified and inferred latches = 7    ;                                                            ;                        ;
++------------------------------------------------------+------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 40    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 20    ;
+; Number of registers using Asynchronous Clear ; 35    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H|COUNT[9] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L|COUNT[9] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10|COUNT[3]    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |CalculatorOU|TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5|COUNT[2]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; N              ; 101   ; Unsigned Binary                                                                                        ;
+; M              ; 011   ; Unsigned Binary                                                                                        ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10 ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; N              ; 1010  ; Unsigned Binary                                                                                         ;
+; M              ; 0100  ; Unsigned Binary                                                                                         ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L ;
++----------------+------------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value      ; Type                                                                                                  ;
++----------------+------------+-------------------------------------------------------------------------------------------------------+
+; N              ; 1111101000 ; Unsigned Binary                                                                                       ;
+; M              ; 1010       ; Unsigned Binary                                                                                       ;
++----------------+------------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H ;
++----------------+------------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value      ; Type                                                                                                  ;
++----------------+------------+-------------------------------------------------------------------------------------------------------+
+; N              ; 1111101000 ; Unsigned Binary                                                                                       ;
+; M              ; 1010       ; Unsigned Binary                                                                                       ;
++----------------+------------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|OnOffToggle:OnOffToggle_inst ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; ON             ; 1     ; Unsigned Binary                                                                            ;
+; OFF            ; 0     ; Unsigned Binary                                                                            ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TPG:TPG_inst|EightBitCounter:EightBitCounter_inst ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; N              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutputUnit:OutputUnit_inst|SignMagnitude:SignsPlace" ;
++------+-------+----------+-------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                               ;
++------+-------+----------+-------------------------------------------------------+
+; w    ; Input ; Info     ; Stuck at VCC                                          ;
+; x    ; Input ; Info     ; Stuck at VCC                                          ;
+; y    ; Input ; Info     ; Stuck at VCC                                          ;
++------+-------+----------+-------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace" ;
++------+-------+----------+----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                  ;
++------+-------+----------+----------------------------------------------------------+
+; w    ; Input ; Info     ; Stuck at GND                                             ;
+; x    ; Input ; Info     ; Stuck at GND                                             ;
++------+-------+----------+----------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m6" ;
++-------+-------+----------+-------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                           ;
++-------+-------+----------+-------------------------------------------------------------------+
+; in[3] ; Input ; Info     ; Stuck at GND                                                      ;
++-------+-------+----------+-------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m1" ;
++-------+-------+----------+-------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                           ;
++-------+-------+----------+-------------------------------------------------------------------+
+; in[3] ; Input ; Info     ; Stuck at GND                                                      ;
++-------+-------+----------+-------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; A[7] ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s7"                                                                                                                 ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bi     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; bi[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; couti  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s6"                 ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; couti ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000H"                                    ;
++-------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                   ;
++-------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; COUNT ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (1 bits) it drives; bit(s) "COUNT[9..1]" have no fanouts ;
++-------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L"                                    ;
++-------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                   ;
++-------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; COUNT ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (1 bits) it drives; bit(s) "COUNT[9..1]" have no fanouts ;
++-------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10"                                      ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; COUNT ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "COUNT[3..1]" have no fanouts ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5"                                       ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; COUNT ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "COUNT[2..1]" have no fanouts ;
+; COUNT ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                      ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 39                          ;
+; cycloneiii_ff         ; 40                          ;
+;     CLR               ; 15                          ;
+;     CLR SLD           ; 20                          ;
+;     ENA               ; 4                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 126                         ;
+;     arith             ; 24                          ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 102                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 11                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 62                          ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 5.05                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Nov 18 09:09:51 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CalculatorOU -c CalculatorOU
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab08/part01/onehzclock.v
+    Info (12023): Found entity 1: oneHzclock File: D:/MyCSE2441Labs/LAB08/Part01/oneHzclock.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab08/part00/dividexn.v
+    Info (12023): Found entity 1: divideXN File: D:/MyCSE2441Labs/LAB08/Part00/divideXN.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab08/onofftoggle/onofftoggle.v
+    Info (12023): Found entity 1: OnOffToggle File: D:/MyCSE2441Labs/LAB08/OnOffToggle/OnOffToggle.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab08/part02/onoffswitch.v
+    Info (12023): Found entity 1: OnOffSwitch File: D:/MyCSE2441Labs/LAB08/Part02/OnOffSwitch.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/signmagnitude/signmagnitude.v
+    Info (12023): Found entity 1: SignMagnitude File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/halfadder/halfadder.v
+    Info (12023): Found entity 1: HalfAdder File: D:/MyCSE2441Labs/Lab10/Part #2/HalfAdder/HalfAdder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/habehav/habehav.v
+    Info (12023): Found entity 1: HAbehav File: D:/MyCSE2441Labs/Lab10/Part #2/HAbehav/HAbehav.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/four2onemux/four2onemux.v
+    Info (12023): Found entity 1: Four2OneMUX File: D:/MyCSE2441Labs/Lab10/Part #2/Four2OneMUX/Four2OneMUX.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/binary2bcd/binary2bcd.v
+    Info (12023): Found entity 1: Binary2BCD File: D:/MyCSE2441Labs/Lab10/Part #2/Binary2BCD/Binary2BCD.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/twoscomplement/twoscomplement.v
+    Info (12023): Found entity 1: TwosComplement File: D:/MyCSE2441Labs/Lab10/Part #2/TwosComplement/TwosComplement.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/outputunit/outputunit.v
+    Info (12023): Found entity 1: OutputUnit File: D:/MyCSE2441Labs/Lab10/Part #2/OutputUnit/OutputUnit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/tpg/tpg.v
+    Info (12023): Found entity 1: TPG File: D:/MyCSE2441Labs/Lab10/Part #2/TPG/TPG.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/eightbitcounter/eightbitcounter.v
+    Info (12023): Found entity 1: EightBitCounter File: D:/MyCSE2441Labs/Lab10/Part #2/EightBitCounter/EightBitCounter.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /mycse2441labs/lab10/part #2/bcdconverter/bcdconverter.v
+    Info (12023): Found entity 1: BCDConverter File: D:/MyCSE2441Labs/Lab10/Part #2/BCDConverter/BCDConverter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file calculatorou.v
+    Info (12023): Found entity 1: CalculatorOU File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at oneHzclock.v(15): created implicit net for "count" File: D:/MyCSE2441Labs/LAB08/Part01/oneHzclock.v Line: 15
+Info (12127): Elaborating entity "CalculatorOU" for the top level hierarchy
+Info (12128): Elaborating entity "TPG" for hierarchy "TPG:TPG_inst" File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 15
+Info (12128): Elaborating entity "OnOffSwitch" for hierarchy "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst" File: D:/MyCSE2441Labs/Lab10/Part #2/TPG/TPG.v Line: 14
+Info (12128): Elaborating entity "oneHzclock" for hierarchy "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst" File: D:/MyCSE2441Labs/LAB08/Part02/OnOffSwitch.v Line: 13
+Info (12128): Elaborating entity "divideXN" for hierarchy "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div5" File: D:/MyCSE2441Labs/LAB08/Part01/oneHzclock.v Line: 16
+Info (12128): Elaborating entity "divideXN" for hierarchy "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div10" File: D:/MyCSE2441Labs/LAB08/Part01/oneHzclock.v Line: 25
+Info (12128): Elaborating entity "divideXN" for hierarchy "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|oneHzclock:oneHzclock_inst|divideXN:div1000L" File: D:/MyCSE2441Labs/LAB08/Part01/oneHzclock.v Line: 34
+Info (12128): Elaborating entity "OnOffToggle" for hierarchy "TPG:TPG_inst|OnOffSwitch:OnOffSwitch_inst|OnOffToggle:OnOffToggle_inst" File: D:/MyCSE2441Labs/LAB08/Part02/OnOffSwitch.v Line: 20
+Info (12128): Elaborating entity "EightBitCounter" for hierarchy "TPG:TPG_inst|EightBitCounter:EightBitCounter_inst" File: D:/MyCSE2441Labs/Lab10/Part #2/TPG/TPG.v Line: 22
+Info (12128): Elaborating entity "OutputUnit" for hierarchy "OutputUnit:OutputUnit_inst" File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 25
+Info (12128): Elaborating entity "TwosComplement" for hierarchy "OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement" File: D:/MyCSE2441Labs/Lab10/Part #2/OutputUnit/OutputUnit.v Line: 16
+Info (12128): Elaborating entity "HAbehav" for hierarchy "OutputUnit:OutputUnit_inst|TwosComplement:twoscomplement|HAbehav:s0" File: D:/MyCSE2441Labs/Lab10/Part #2/TwosComplement/TwosComplement.v Line: 8
+Info (12128): Elaborating entity "Binary2BCD" for hierarchy "OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD" File: D:/MyCSE2441Labs/Lab10/Part #2/OutputUnit/OutputUnit.v Line: 24
+Info (12128): Elaborating entity "BCDConverter" for hierarchy "OutputUnit:OutputUnit_inst|Binary2BCD:binary2BCD|BCDConverter:m1" File: D:/MyCSE2441Labs/Lab10/Part #2/Binary2BCD/Binary2BCD.v Line: 22
+Info (12128): Elaborating entity "SignMagnitude" for hierarchy "OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace" File: D:/MyCSE2441Labs/Lab10/Part #2/OutputUnit/OutputUnit.v Line: 39
+Warning (10270): Verilog HDL Case Statement warning at SignMagnitude.v(9): incomplete case statement has no default case item File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 9
+Warning (10240): Verilog HDL Always Construct warning at SignMagnitude.v(7): inferring latch(es) for variable "a", which holds its previous value in one or more paths through the always construct File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Warning (10240): Verilog HDL Always Construct warning at SignMagnitude.v(7): inferring latch(es) for variable "b", which holds its previous value in one or more paths through the always construct File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Warning (10240): Verilog HDL Always Construct warning at SignMagnitude.v(7): inferring latch(es) for variable "c", which holds its previous value in one or more paths through the always construct File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Warning (10240): Verilog HDL Always Construct warning at SignMagnitude.v(7): inferring latch(es) for variable "d", which holds its previous value in one or more paths through the always construct File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Warning (10240): Verilog HDL Always Construct warning at SignMagnitude.v(7): inferring latch(es) for variable "e", which holds its previous value in one or more paths through the always construct File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Warning (10240): Verilog HDL Always Construct warning at SignMagnitude.v(7): inferring latch(es) for variable "f", which holds its previous value in one or more paths through the always construct File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Warning (10240): Verilog HDL Always Construct warning at SignMagnitude.v(7): inferring latch(es) for variable "g", which holds its previous value in one or more paths through the always construct File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Info (10041): Inferred latch for "g" at SignMagnitude.v(7) File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Info (10041): Inferred latch for "f" at SignMagnitude.v(7) File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Info (10041): Inferred latch for "e" at SignMagnitude.v(7) File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Info (10041): Inferred latch for "d" at SignMagnitude.v(7) File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Info (10041): Inferred latch for "c" at SignMagnitude.v(7) File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Info (10041): Inferred latch for "b" at SignMagnitude.v(7) File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Info (10041): Inferred latch for "a" at SignMagnitude.v(7) File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 7
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:SignsPlace|g" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 6
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace|g" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 6
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace|f" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace|e" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace|d" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace|c" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace|b" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:HundredsPlace|a" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|g" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 6
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|f" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|e" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|d" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|c" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|b" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|a" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|a" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|b" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|c" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|d" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|e" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|f" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+Warning (14026): LATCH primitive "OutputUnit:OutputUnit_inst|SignMagnitude:TensPlace|g" is permanently enabled File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 6
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|a has unsafe behavior File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0] File: D:/MyCSE2441Labs/Lab10/Part #2/EightBitCounter/EightBitCounter.v Line: 11
+Warning (13012): Latch OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|b has unsafe behavior File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0] File: D:/MyCSE2441Labs/Lab10/Part #2/EightBitCounter/EightBitCounter.v Line: 11
+Warning (13012): Latch OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|c has unsafe behavior File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0] File: D:/MyCSE2441Labs/Lab10/Part #2/EightBitCounter/EightBitCounter.v Line: 11
+Warning (13012): Latch OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|d has unsafe behavior File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0] File: D:/MyCSE2441Labs/Lab10/Part #2/EightBitCounter/EightBitCounter.v Line: 11
+Warning (13012): Latch OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|e has unsafe behavior File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0] File: D:/MyCSE2441Labs/Lab10/Part #2/EightBitCounter/EightBitCounter.v Line: 11
+Warning (13012): Latch OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|f has unsafe behavior File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 5
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0] File: D:/MyCSE2441Labs/Lab10/Part #2/EightBitCounter/EightBitCounter.v Line: 11
+Warning (13012): Latch OutputUnit:OutputUnit_inst|SignMagnitude:OnesPlace|g has unsafe behavior File: D:/MyCSE2441Labs/Lab10/Part #2/SignMagnitude/SignMagnitude.v Line: 6
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal TPG:TPG_inst|EightBitCounter:EightBitCounter_inst|y[0] File: D:/MyCSE2441Labs/Lab10/Part #2/EightBitCounter/EightBitCounter.v Line: 11
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "hex2[1]" is stuck at GND File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 5
+    Warning (13410): Pin "hex2[2]" is stuck at GND File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 5
+    Warning (13410): Pin "hex2[6]" is stuck at VCC File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 5
+    Warning (13410): Pin "hex3[0]" is stuck at VCC File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 6
+    Warning (13410): Pin "hex3[1]" is stuck at VCC File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 6
+    Warning (13410): Pin "hex3[2]" is stuck at VCC File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 6
+    Warning (13410): Pin "hex3[3]" is stuck at VCC File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 6
+    Warning (13410): Pin "hex3[4]" is stuck at VCC File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 6
+    Warning (13410): Pin "hex3[5]" is stuck at VCC File: D:/MyCSE2441Labs/Lab10/Part #2/CalculatorOU/CalculatorOU.v Line: 6
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 161 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 122 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Fri Nov 18 09:10:19 2022
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:20
+
+

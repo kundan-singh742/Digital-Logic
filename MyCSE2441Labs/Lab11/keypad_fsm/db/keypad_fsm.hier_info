@@ -1,0 +1,25 @@
+|keypad_fsm
+clk => col[0]~reg0.CLK
+clk => col[1]~reg0.CLK
+clk => col[2]~reg0.CLK
+clk => col[3]~reg0.CLK
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+clk => state[2]~reg0.CLK
+clk => state[3]~reg0.CLK
+row[0] => trig.IN0
+row[1] => trig.IN1
+row[2] => trig.IN1
+row[3] => trig.IN1
+col[0] <= col[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[1] <= col[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[2] <= col[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col[3] <= col[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sense <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[3] <= state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+trig <= trig.DB_MAX_OUTPUT_PORT_TYPE
+
+

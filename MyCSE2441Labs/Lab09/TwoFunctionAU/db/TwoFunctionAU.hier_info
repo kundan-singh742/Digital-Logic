@@ -1,0 +1,367 @@
+|TwoFunctionAU
+inputValue[0] => inputValue[0].IN2
+inputValue[1] => inputValue[1].IN2
+inputValue[2] => inputValue[2].IN2
+inputValue[3] => inputValue[3].IN2
+inputValue[4] => inputValue[4].IN2
+inputValue[5] => inputValue[5].IN2
+inputValue[6] => inputValue[6].IN2
+inputValue[7] => inputValue[7].IN2
+CLKA => CLKA.IN1
+CLKB => CLKB.IN1
+CLKO => CLKO.IN1
+clear => clear.IN3
+AddorSubtract => AddorSubtract.IN1
+hex0[0] << BinaryToHex:BinaryToHexLSb.a
+hex0[1] << BinaryToHex:BinaryToHexLSb.b
+hex0[2] << BinaryToHex:BinaryToHexLSb.c
+hex0[3] << BinaryToHex:BinaryToHexLSb.d
+hex0[4] << BinaryToHex:BinaryToHexLSb.e
+hex0[5] << BinaryToHex:BinaryToHexLSb.f
+hex0[6] << BinaryToHex:BinaryToHexLSb.g
+hex1[0] << BinaryToHex:BinaryToHexMSb.a
+hex1[1] << BinaryToHex:BinaryToHexMSb.b
+hex1[2] << BinaryToHex:BinaryToHexMSb.c
+hex1[3] << BinaryToHex:BinaryToHexMSb.d
+hex1[4] << BinaryToHex:BinaryToHexMSb.e
+hex1[5] << BinaryToHex:BinaryToHexMSb.f
+hex1[6] << BinaryToHex:BinaryToHexMSb.g
+hex2[0] << BinaryToHex:LSbofinputB.a
+hex2[1] << BinaryToHex:LSbofinputB.b
+hex2[2] << BinaryToHex:LSbofinputB.c
+hex2[3] << BinaryToHex:LSbofinputB.d
+hex2[4] << BinaryToHex:LSbofinputB.e
+hex2[5] << BinaryToHex:LSbofinputB.f
+hex2[6] << BinaryToHex:LSbofinputB.g
+hex3[0] << BinaryToHex:MSbofinputB.a
+hex3[1] << BinaryToHex:MSbofinputB.b
+hex3[2] << BinaryToHex:MSbofinputB.c
+hex3[3] << BinaryToHex:MSbofinputB.d
+hex3[4] << BinaryToHex:MSbofinputB.e
+hex3[5] << BinaryToHex:MSbofinputB.f
+hex3[6] << BinaryToHex:MSbofinputB.g
+hex4[0] << BinaryToHex:LSbofinputA.a
+hex4[1] << BinaryToHex:LSbofinputA.b
+hex4[2] << BinaryToHex:LSbofinputA.c
+hex4[3] << BinaryToHex:LSbofinputA.d
+hex4[4] << BinaryToHex:LSbofinputA.e
+hex4[5] << BinaryToHex:LSbofinputA.f
+hex4[6] << BinaryToHex:LSbofinputA.g
+hex5[0] << BinaryToHex:MSbofinputA.a
+hex5[1] << BinaryToHex:MSbofinputA.b
+hex5[2] << BinaryToHex:MSbofinputA.c
+hex5[3] << BinaryToHex:MSbofinputA.d
+hex5[4] << BinaryToHex:MSbofinputA.e
+hex5[5] << BinaryToHex:MSbofinputA.f
+hex5[6] << BinaryToHex:MSbofinputA.g
+Aout[0] << wireA[0].DB_MAX_OUTPUT_PORT_TYPE
+Aout[1] << wireA[1].DB_MAX_OUTPUT_PORT_TYPE
+Aout[2] << wireA[2].DB_MAX_OUTPUT_PORT_TYPE
+Aout[3] << wireA[3].DB_MAX_OUTPUT_PORT_TYPE
+Aout[4] << wireA[4].DB_MAX_OUTPUT_PORT_TYPE
+Aout[5] << wireA[5].DB_MAX_OUTPUT_PORT_TYPE
+Aout[6] << wireA[6].DB_MAX_OUTPUT_PORT_TYPE
+Aout[7] << wireA[7].DB_MAX_OUTPUT_PORT_TYPE
+Bout[0] << wireB[0].DB_MAX_OUTPUT_PORT_TYPE
+Bout[1] << wireB[1].DB_MAX_OUTPUT_PORT_TYPE
+Bout[2] << wireB[2].DB_MAX_OUTPUT_PORT_TYPE
+Bout[3] << wireB[3].DB_MAX_OUTPUT_PORT_TYPE
+Bout[4] << wireB[4].DB_MAX_OUTPUT_PORT_TYPE
+Bout[5] << wireB[5].DB_MAX_OUTPUT_PORT_TYPE
+Bout[6] << wireB[6].DB_MAX_OUTPUT_PORT_TYPE
+Bout[7] << wireB[7].DB_MAX_OUTPUT_PORT_TYPE
+Sout[0] << wireRO[0].DB_MAX_OUTPUT_PORT_TYPE
+Sout[1] << wireRO[1].DB_MAX_OUTPUT_PORT_TYPE
+Sout[2] << wireRO[2].DB_MAX_OUTPUT_PORT_TYPE
+Sout[3] << wireRO[3].DB_MAX_OUTPUT_PORT_TYPE
+Sout[4] << wireRO[4].DB_MAX_OUTPUT_PORT_TYPE
+Sout[5] << wireRO[5].DB_MAX_OUTPUT_PORT_TYPE
+Sout[6] << wireRO[6].DB_MAX_OUTPUT_PORT_TYPE
+Sout[7] << wireRO[7].DB_MAX_OUTPUT_PORT_TYPE
+OVERFLOW << FAbehavadderandsubtract:ArithmeticUnit.OVR
+CARRY << FAbehavadderandsubtract:ArithmeticUnit.Cout
+
+
+|TwoFunctionAU|register:registerA
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLK => Q[4]~reg0.CLK
+CLK => Q[5]~reg0.CLK
+CLK => Q[6]~reg0.CLK
+CLK => Q[7]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
+CLR => Q[4]~reg0.ACLR
+CLR => Q[5]~reg0.ACLR
+CLR => Q[6]~reg0.ACLR
+CLR => Q[7]~reg0.ACLR
+
+
+|TwoFunctionAU|BinaryToHex:MSbofinputA
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|BinaryToHex:LSbofinputA
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|register:registerB
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLK => Q[4]~reg0.CLK
+CLK => Q[5]~reg0.CLK
+CLK => Q[6]~reg0.CLK
+CLK => Q[7]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
+CLR => Q[4]~reg0.ACLR
+CLR => Q[5]~reg0.ACLR
+CLR => Q[6]~reg0.ACLR
+CLR => Q[7]~reg0.ACLR
+
+
+|TwoFunctionAU|BinaryToHex:MSbofinputB
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|BinaryToHex:LSbofinputB
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|FAbehavadderandsubtract:ArithmeticUnit
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => comb.IN0
+B[1] => comb.IN0
+B[2] => comb.IN0
+B[3] => comb.IN0
+B[4] => comb.IN0
+B[5] => comb.IN0
+B[6] => comb.IN0
+B[7] => comb.IN0
+Cxor => C[0].IN1
+S[0] <= FAbehav:s0.si
+S[1] <= FAbehav:s1.si
+S[2] <= FAbehav:s2.si
+S[3] <= FAbehav:s3.si
+S[4] <= FAbehav:s4.si
+S[5] <= FAbehav:s5.si
+S[6] <= FAbehav:s6.si
+S[7] <= FAbehav:s7.si
+Cout <= FAbehav:s7.couti
+OVR <= OVR.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|FAbehavadderandsubtract:ArithmeticUnit|FAbehav:s0
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|FAbehavadderandsubtract:ArithmeticUnit|FAbehav:s1
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|FAbehavadderandsubtract:ArithmeticUnit|FAbehav:s2
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|FAbehavadderandsubtract:ArithmeticUnit|FAbehav:s3
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|FAbehavadderandsubtract:ArithmeticUnit|FAbehav:s4
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|FAbehavadderandsubtract:ArithmeticUnit|FAbehav:s5
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|FAbehavadderandsubtract:ArithmeticUnit|FAbehav:s6
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|FAbehavadderandsubtract:ArithmeticUnit|FAbehav:s7
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|register:registerO
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+D[4] => Q[4]~reg0.DATAIN
+D[5] => Q[5]~reg0.DATAIN
+D[6] => Q[6]~reg0.DATAIN
+D[7] => Q[7]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLK => Q[4]~reg0.CLK
+CLK => Q[5]~reg0.CLK
+CLK => Q[6]~reg0.CLK
+CLK => Q[7]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
+CLR => Q[4]~reg0.ACLR
+CLR => Q[5]~reg0.ACLR
+CLR => Q[6]~reg0.ACLR
+CLR => Q[7]~reg0.ACLR
+
+
+|TwoFunctionAU|BinaryToHex:BinaryToHexMSb
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TwoFunctionAU|BinaryToHex:BinaryToHexLSb
+w => Decoder0.IN0
+x => Decoder0.IN1
+y => Decoder0.IN2
+z => Decoder0.IN3
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+

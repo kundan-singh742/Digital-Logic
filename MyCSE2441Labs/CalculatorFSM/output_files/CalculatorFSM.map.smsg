@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at CalculatorFSM.v(35): always construct contains both blocking and non-blocking assignments File: D:/MyCSE2441Labs/CalculatorFSM/CalculatorFSM.v Line: 35
+Info (10281): Verilog HDL Declaration information at CalculatorFSM.v(10): object "Slow_Clock" differs only in case from object "slow_clock" in the same scope File: D:/MyCSE2441Labs/CalculatorFSM/CalculatorFSM.v Line: 10

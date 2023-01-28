@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "LoadA",
+					"strict" : false
+				},
+				{
+					"name" : "LoadB",
+					"strict" : false
+				},
+				{
+					"name" : "LoadR",
+					"strict" : false
+				},
+				{
+					"name" : "LoadOU",
+					"strict" : false
+				},
+				{
+					"name" : "IUAU",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ENTER",
+					"strict" : false
+				},
+				{
+					"name" : "CLR",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
